@@ -13,9 +13,10 @@ module.exports = (client, message) => {
             message.reply("I love you Lizzie!");
         } else if (message.author.username == "thunderobolt") {
             message.reply("Greetings Master Aatrox!");
-        //Everyone Else
+        //Balance Patch
         } else {
-            message.reply("Set your birthday with /setbday!");
+            message.reply("**Version 1.0.1**\n"
+                + "-Added New Aatroxx voicelines with the /tobble command");
         }
     }
 

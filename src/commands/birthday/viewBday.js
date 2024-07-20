@@ -25,7 +25,7 @@ module.exports = {
                 let age = calculateAge(user.day, user.month, user.year);
                 interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is " + user.month + "/" + user.day + "/" + user.year + ". They are " + age + " years old!");
             } else {
-                interaction.reply("This user does not have a birthday listed!");
+                interaction.reply(interaction.options.getMember("user").displayName + " does not have a birthday listed!");
             }
         } catch (error) {
             console.log("Error viewing: " + error);
