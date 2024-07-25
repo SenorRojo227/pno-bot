@@ -23,7 +23,13 @@ module.exports = {
             const user = await Birthday.findOne(query);
             if (user) {
                 let age = calculateAge(user.day, user.month, user.year);
-                interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is " + user.month + "/" + user.day + "/" + user.year + ". They are " + age + " years old!");
+
+                //Check if Birthday
+                if (user.day == Date.getDate() && user.month == (Date.getMonth() + 1)) {
+                    interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is today! They are " + age + " years old! Happy Birthday!");
+                } else {
+                    interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is " + user.month + "/" + user.day + "/" + user.year + ". They are " + age + " years old!");
+                }
             } else {
                 interaction.reply(interaction.options.getMember("user").displayName + " does not have a birthday listed!");
             }
