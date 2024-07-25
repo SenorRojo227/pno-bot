@@ -15,8 +15,8 @@ module.exports = (client, message) => {
             message.reply("Greetings Master Aatrox!");
         //Balance Patch
         } else {
-            message.reply("**Version 1.0.1**\n"
-                + "-Added New Aatroxx voicelines with the /tobble command");
+            message.reply("**Version 1.0.2**\n"
+                + "-Allowed PNO Bot to wish a user Happy Birthday with /viewBday");
         }
     }
 
