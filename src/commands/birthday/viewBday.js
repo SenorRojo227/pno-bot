@@ -25,7 +25,8 @@ module.exports = {
                 let age = calculateAge(user.day, user.month, user.year);
 
                 //Check if Birthday
-                if (user.day == Date.getDate() && user.month == (Date.getMonth() + 1)) {
+                const date = new Date();
+                if (user.day == date.getDate() && user.month == (date.getMonth() + 1)) {
                     interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is today! They are " + age + " years old! Happy Birthday!");
                 } else {
                     interaction.reply(interaction.options.getMember("user").displayName + "'s birthday is " + user.month + "/" + user.day + "/" + user.year + ". They are " + age + " years old!");
