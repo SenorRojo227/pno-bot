@@ -15,11 +15,11 @@ module.exports = {
                 .setTitle("Birthdays");
             for (const u of users) {
                 try {
-                    let member = interaction.guild.members.fetch(u.userId)
+                    let member = interaction.guild.members.fetch({user: u.userId, force: true})
                     .then(console.log)
                     .catch(console.error);
                     embed.addFields({
-                        name: member.nickname,
+                        name: member.displayName,
                         value: u.month + "/" + u.day + "/" + u.year,
                     });
                 } catch (error) {
