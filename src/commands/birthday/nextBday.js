@@ -21,9 +21,9 @@ module.exports = {
                     isBday = true;
                 }
             }   
-            const displayName = interaction.guild.members.cache.get(users[index].userId).displayName;
+            const displayName = await interaction.guild.members.cache.get(users[index].userId).displayName;
             if (isBday) {
-                const bdayName = interaction.guild.members.cache.get(users[index-1].userId).displayName;
+                const bdayName = await interaction.guild.members.cache.get(users[index-1].userId).displayName;
                 interaction.reply("Today is " + bdayName + "'s birthday! The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "/" + users[index].year + "!");
             } else {
                 interaction.reply("The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "/" + users[index].year + "!");
