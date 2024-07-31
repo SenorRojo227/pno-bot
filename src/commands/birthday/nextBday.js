@@ -10,8 +10,8 @@ module.exports = {
         };
         try {
             const date = new Date();
-            const index = 0;
-            const isBday = false;
+            let index = 0;
+            let isBday = false;
             const users = await Birthday.find(query).sort('month day');
             for (let i = 0; i < users.length; i++) {
                 if (users[i].month > date.getMonth() + 1 || (users[i].month == date.getMonth() + 1 && users[i].day > date.getDate())) {

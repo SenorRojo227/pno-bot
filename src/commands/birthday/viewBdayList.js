@@ -10,15 +10,22 @@ module.exports = {
             guildId: interaction.guild.id,
         };
         try {
-            const users = await Birthday.find(query).sort({month: 1});
+            const users = await Birthday.find(query).sort('month day');
             const embed = new EmbedBuilder()
                 .setTitle("Birthdays");
-            for (let u of users) {
-                let displayName = client.users.cache.get(u.userId).displayName;
-                embed.addFields({
-                    name: displayName,
-                    value: u.month + "/" + u.day + "/" + u.year,
-                });
+            for (const u of users) {
+                try {
+                    let displayName = client.users.cache.get(u.userId).displayName;
+                    embed.addFields({
+                        name: displayName,
+                        value: u.month + "/" + u.day + "/" + u.year,
+                    });
+                } catch (error) {
+                    embed.addFields({
+                        name: "Unknown User",
+                        value: u.month + "/" + u.day + "/" + u.year,
+                    });
+                }
             }
             interaction.reply({embeds: [embed]});
         } catch (error) {
