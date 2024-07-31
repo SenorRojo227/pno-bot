@@ -19,7 +19,7 @@ module.exports = {
                     .then(console.log)
                     .catch(console.error);
                     embed.addFields({
-                        name: member.displayName,
+                        name: member.nickname,
                         value: u.month + "/" + u.day + "/" + u.year,
                     });
                 } catch (error) {
