@@ -3,7 +3,6 @@ const Birthday = require('../../models/birthday');
 module.exports = {
     name: "nextbday",
     description: "Shows the next upcoming birthday.",
-    testOnly: true,
     
     callback: async (client, interaction) => {
         const query = {
@@ -22,9 +21,9 @@ module.exports = {
                     isBday = true;
                 }
             }   
-            const displayName = client.users.cache.get(users[index].userId).displayName;
+            const displayName = interaction.guild.members.cache.get(users[index].userId).displayName;
             if (isBday) {
-                const bdayName = client.users.cache.get(users[index].userId).displayName;
+                const bdayName = interaction.guild.members.cache.get(users[index].userId).displayName;
                 interaction.reply("Today is " + bdayName + "'s birthday! The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "/" + users[index].year + "!");
             } else {
                 interaction.reply("The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "/" + users[index].year + "!");
