@@ -4,6 +4,7 @@ const Birthday = require('../../models/birthday');
 module.exports = {
     name: "viewbdaylist",
     description: "Shows a list of all birthdays.",
+    deleted: true,
     
     callback: async (client, interaction) => {
         const query = {
