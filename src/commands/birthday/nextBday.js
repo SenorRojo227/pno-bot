@@ -3,7 +3,7 @@ const Birthday = require('../../models/birthday');
 module.exports = {
     name: "nextbday",
     description: "Shows the next upcoming birthday.",
-    deleted: true,
+    testOnly: true,
     
     callback: async (client, interaction) => {
         const query = {

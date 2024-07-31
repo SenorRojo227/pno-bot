@@ -4,7 +4,7 @@ const Birthday = require('../../models/birthday');
 module.exports = {
     name: "viewbdaylist",
     description: "Shows a list of all birthdays.",
-    deleted: true,
+    testOnly: true,
     
     callback: async (client, interaction) => {
         const query = {
@@ -16,9 +16,7 @@ module.exports = {
                 .setTitle("Birthdays");
             for (const u of users) {
                 try {
-                    let member = interaction.guild.members.fetch({user: u.userId, force: true})
-                    .then(console.log)
-                    .catch(console.error);
+                    let member = interaction.guild.members.cache.get(u.userId);
                     embed.addFields({
                         name: member.displayName,
                         value: u.month + "/" + u.day + "/" + u.year,
