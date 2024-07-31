@@ -15,8 +15,9 @@ module.exports = (client, message) => {
             message.reply("Greetings Master Aatrox!");
         //Balance Patch
         } else {
-            message.reply("**Version 1.0.2**\n"
-                + "-Allowed PNO Bot to wish a user Happy Birthday with /viewBday");
+            message.reply("**Version 1.0.3**\n"
+                + "- /nextBday can now be used to view the next upcoming birthday.\n"
+                + "- /viewAllBdays can now be used to view all birthdays listed.");
         }
     }
 
