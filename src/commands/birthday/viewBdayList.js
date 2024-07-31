@@ -13,6 +13,7 @@ module.exports = {
             const users = await Birthday.find(query).sort('month day');
             const embed = new EmbedBuilder()
                 .setTitle("Birthdays");
+            //const memberList = client.guild.get(interaction.guild.id).members;
             for (const u of users) {
                 try {
                     let displayName = client.users.cache.get(u.userId).displayName;
@@ -21,6 +22,7 @@ module.exports = {
                         value: u.month + "/" + u.day + "/" + u.year,
                     });
                 } catch (error) {
+                    console.log(u.userId);
                     embed.addFields({
                         name: "Unknown User",
                         value: u.month + "/" + u.day + "/" + u.year,
