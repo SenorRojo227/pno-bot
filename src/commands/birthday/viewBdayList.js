@@ -15,7 +15,7 @@ module.exports = {
                 .setTitle("Birthdays");
             for (const u of users) {
                 try {
-                    const member = interaction.guild.members.fetch(u.userId).then(m => console.log(m));
+                    const member = await interaction.guild.members.cache.get(u.userId);
                     embed.addFields({
                         name: member.displayName,
                         value: u.month + "/" + u.day + "/" + u.year,
