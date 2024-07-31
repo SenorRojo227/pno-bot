@@ -13,10 +13,10 @@ module.exports = {
             const users = await Birthday.find(query).sort('month day');
             const embed = new EmbedBuilder()
                 .setTitle("Birthdays");
-            const memberList = client.guild.get(interaction.guild.id);
             for (const u of users) {
                 try {
-                    let displayName = memberList.members.cache.get(u.userId).displayName;
+                    let displayName = client.users.cache.get(u.userId).displayName;
+                    console.log(displayName);
                     embed.addFields({
                         name: displayName,
                         value: u.month + "/" + u.day + "/" + u.year,
