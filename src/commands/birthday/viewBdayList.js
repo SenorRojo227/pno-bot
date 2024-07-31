@@ -15,13 +15,12 @@ module.exports = {
                 .setTitle("Birthdays");
             for (const u of users) {
                 try {
-                    let displayName = interaction.guild.users.cache.get(u.userId).displayName;
+                    let displayName = interaction.guild.members.search(u.userId).displayName;
                     embed.addFields({
                         name: displayName,
                         value: u.month + "/" + u.day + "/" + u.year,
                     });
                 } catch (error) {
-                    console.log(u.userId);
                     embed.addFields({
                         name: "Unknown User",
                         value: u.month + "/" + u.day + "/" + u.year,
