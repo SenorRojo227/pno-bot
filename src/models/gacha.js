@@ -1,11 +1,11 @@
 const { Schema, model } = require('mongoose');
 
 const gachaSchema = new Schema({
-    member: {
+    guildId: {
         type: String,
         required: true,
     },
-    guildId: {
+    unit: {
         type: String,
         required: true,
     },

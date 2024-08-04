@@ -18,7 +18,7 @@ module.exports = {
                     const member = await interaction.guild.members.cache.get(u.userId);
                     embed.addFields({
                         name: member.displayName,
-                        value: u.month + "/" + u.day + "/" + u.year,
+                        value: u.month + "/" + u.day,
                     });
                 } catch (error) {
                     console.log(error);

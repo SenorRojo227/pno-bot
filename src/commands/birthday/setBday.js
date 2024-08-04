@@ -1,80 +1,79 @@
 const { ApplicationCommandOptionType } = require('discord.js');
-const calculateAge = require('../../utils/calculateAge');
 const Birthday = require('../../models/birthday');
 
 module.exports = {
     name: "setbday",
-        description: "Sets the users birthday.",
-        options: [
-            {
-                name: "day",
-                description: "Enter your birth day.",
-                type: ApplicationCommandOptionType.Number,
-                required: true,
-            },
-            {
-                name: "month",
-                description: "Enter your birth month.",
-                type: ApplicationCommandOptionType.Number,
-                choices: [
-                    {
-                        name: "january",
-                        value: 1,
-                    },
-                    {
-                        name: "february",
-                        value: 2,
-                    },
-                    {
-                        name: "march",
-                        value: 3,
-                    },
-                    {
-                        name: "april",
-                        value: 4,
-                    },
-                    {
-                        name: "may",
-                        value: 5,
-                    },
-                    {
-                        name: "june",
-                        value: 6,
-                    },
-                    {
-                        name: "july",
-                        value: 7,
-                    },
-                    {
-                        name: "august",
-                        value: 8,
-                    },
-                    {
-                        name: "september",
-                        value: 9,
-                    },
-                    {
-                        name: "october",
-                        value: 10,
-                    },
-                    {
-                        name: "november",
-                        value: 11,
-                    },
-                    {
-                        name: "december",
-                        value: 12,
-                    },
-                ],
-                required: true,
-            },
-            {
-                name: "year",
-                description: "Enter your birth year.",
-                type: ApplicationCommandOptionType.Number,
-                required: true,
-            }
-        ],
+    description: "Sets the users birthday.",
+    options: [
+        {
+            name: "day",
+            description: "Enter your birth day.",
+            type: ApplicationCommandOptionType.Number,
+            required: true,
+        },
+        {
+            name: "month",
+            description: "Enter your birth month.",
+            type: ApplicationCommandOptionType.Number,
+            choices: [
+                {
+                    name: "january",
+                    value: 1,
+                },
+                {
+                    name: "february",
+                    value: 2,
+                },
+                {
+                    name: "march",
+                    value: 3,
+                },
+                {
+                    name: "april",
+                    value: 4,
+                },
+                {
+                    name: "may",
+                    value: 5,
+                },
+                {
+                    name: "june",
+                    value: 6,
+                },
+                {
+                    name: "july",
+                    value: 7,
+                },
+                {
+                    name: "august",
+                    value: 8,
+                },
+                {
+                    name: "september",
+                    value: 9,
+                },
+                {
+                    name: "october",
+                    value: 10,
+                },
+                {
+                    name: "november",
+                    value: 11,
+                },
+                {
+                    name: "december",
+                    value: 12,
+                },
+            ],
+            required: true,
+        },
+        {
+            name: "year",
+            description: "Enter your birth year.",
+            type: ApplicationCommandOptionType.Number,
+            required: true,
+        }
+    ],
     
     callback: async (client, interaction) => {
         const query = {

@@ -11,13 +11,16 @@ module.exports = (client, message) => {
         //Lizzie
         if (message.author.username == "rytw") {
             message.reply("I love you Lizzie!");
+        //Tobble
         } else if (message.author.username == "thunderobolt") {
             message.reply("Greetings Master Aatrox!");
         //Balance Patch
         } else {
-            message.reply("**Version 1.0.3**\n"
-                + "- /nextBday can now be used to view the next upcoming birthday.\n"
-                + "- /viewAllBdays can now be used to view all birthdays listed.");
+            message.reply("**Version 2.0.0**\n"
+                + "- You can now roll for your favorite PNO members with /roll!\n"
+                + "- Use /daily to gain $10 each day.\n"
+                + "- /inventory can be used to view your collected units and balance.\n"
+                + "Disclaimer: This an experimental version that may be reset if major bugs are found!");
         }
     }
 
