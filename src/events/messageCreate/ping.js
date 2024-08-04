@@ -25,3 +25,11 @@ module.exports = (client, message) => {
     }
 
 }
+
+/* Version History
+[Version 2.0.0]
+- You can now roll for your favorite PNO members with /roll!
+- Use /daily to gain $10 each day.
+- /inventory can be used to view your collected units and balance.
+Disclaimer: This an experimental version that may be reset if major bugs are found!
+*/
