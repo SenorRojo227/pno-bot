@@ -22,11 +22,11 @@ module.exports = async (interaction, guaranteed = 1) => {
 
     //Calculate Probability
     let rolledUnit;
-    console.log("Starting Probability: " + prob);
+    //console.log("Starting Probability: " + prob);
     for (const unit of units) {
         //Subtract probability from individual rates
         prob -= (rates[unit.rarity - 1] / rarities[unit.rarity]);
-        console.log("Skipped: " + unit.unit + "\nCurrent Probability: " + prob);
+        //console.log("Skipped: " + unit.unit + "\nCurrent Probability: " + prob);
 
         //Break once probability reaches 0
         if (prob < 0) {

@@ -1,9 +1,9 @@
 const Inventory = require('../../models/inventory');
-const dailyAmount = 10;
+const dailyAmount = 100;
 
 module.exports = {
     name: "daily",
-    description: "Claim your daily $10.",
+    description: "Claim your daily $100.",
     
     callback: async (client, interaction) => {
         const query = {
@@ -19,8 +19,9 @@ module.exports = {
 
                 if (lastDailyDate != currentDate) {
                     inv.balance += dailyAmount;
+                    inv.lastDaily = new Date();
                     await inv.save();
-                    interaction.reply("You have received $10!");
+                    interaction.reply("You have received $100!");
                 } else {
                     interaction.reply("You have already collected your dailies today. Come back tomorrow!");
                 }

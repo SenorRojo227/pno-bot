@@ -57,7 +57,7 @@ module.exports = {
                     for (let i = 1; i <= interaction.options.get("amount").value; i++) {
                         let gRarity = (i === 10 && guaranteed) ? 4 : 1;
                         const rolledUnit = await getRandomUnit(interaction, gRarity);
-                        console.log(rolledUnit);
+                        //console.log(rolledUnit);
                         const unitQuery = {
                             guildId: interaction.guild.id,
                             unit: rolledUnit,
