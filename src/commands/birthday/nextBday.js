@@ -43,7 +43,7 @@ module.exports = {
             
         } catch (error) {
             console.log("Error viewing: " + error);
-            interaction.reply("An error occurred while trying to retrieve the next birthday.");
+            interaction.reply("There was an error while trying to view the next birthday. Please try again later.");
         }
     }
 }

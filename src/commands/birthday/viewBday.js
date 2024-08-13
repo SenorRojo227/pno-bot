@@ -36,6 +36,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error viewing: " + error);
+            interaction.reply("There was an error while trying to view this birthday. Please try again later.");
         }
     }
 }

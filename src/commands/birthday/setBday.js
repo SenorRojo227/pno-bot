@@ -102,6 +102,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error setting birthday: " + error);
+            interaction.reply("There was an error while trying to set you birthday. Please try again later.");
         }
     }
 }

@@ -27,6 +27,7 @@ module.exports = {
             interaction.reply({embeds: [embed]});
         } catch (error) {
             console.log("Error viewing: " + error);
+            interaction.reply("There was an error while trying to view the list of birthdays. Please try again later.");
         }
     }
 }

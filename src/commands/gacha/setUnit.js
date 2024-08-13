@@ -73,6 +73,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error setting unit: " + error);
+            interaction.reply("There was an error while trying to set this unit. Please try again later.");
         }
     }
 }

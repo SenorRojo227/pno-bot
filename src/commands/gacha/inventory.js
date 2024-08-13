@@ -36,6 +36,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error viewing inventory: " + error);
+            interaction.reply("There was an error while trying to view your inventory. Please try again later.");
         }
     }
 }
