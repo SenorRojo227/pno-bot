@@ -50,13 +50,14 @@ module.exports = {
             if (inv) {
                 if (inv.balance >= interaction.options.get("amount").value * 10) {
                     inv.balance -= interaction.options.get("amount").value * 10;
+                    inv.rolls += 1;
                     const embed = new EmbedBuilder()
                     .setTitle("Rolls x" + interaction.options.get("amount").value);
                     
                     let guaranteed = true;
                     for (let i = 1; i <= interaction.options.get("amount").value; i++) {
                         let gRarity = (i === 10 && guaranteed) ? 4 : 1;
-                        const rolledUnit = await getRandomUnit(interaction, gRarity);
+                        const rolledUnit = await getRandomUnit(interaction, gRarity, inv);
                         //console.log(rolledUnit);
                         const unitQuery = {
                             guildId: interaction.guild.id,
