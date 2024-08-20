@@ -35,6 +35,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error getting dailies: " + error);
+            interaction.reply("There was an error while trying to claim your dailies. Please try again later.");
         }
     }
 }

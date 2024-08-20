@@ -16,24 +16,8 @@ module.exports = (client, message) => {
             message.reply("Greetings Master Aatrox!");
         //Balance Patch
         } else {
-            message.reply("**Version 2.0.1**\n"
-                + "- /daily now works as intended. Daily income has been increased to $100.\n"
-                + "- You can now roll for your favorite PNO members with /roll!\n"
-                + "- Use /daily to gain $100 each day.\n"
-                + "- /inventory can be used to view your collected units and balance.\n"
-                + "Disclaimer: This an experimental version that may be reset if major bugs are found!");
+            message.reply("Got ideas for the bot? Feel free to ping SrRojo to share them!");
         }
     }
 
 }
-
-/* Version History
-[Version 2.0.1]
-- /daily now works as intended. Daily income has been increased to $100.
-
-[Version 2.0.0]
-- You can now roll for your favorite PNO members with /roll!
-- Use /daily to gain $10 each day.
-- /inventory can be used to view your collected units and balance.
-Disclaimer: This an experimental version that may be reset if major bugs are found!
-*/

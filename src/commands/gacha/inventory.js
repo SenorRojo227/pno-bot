@@ -19,15 +19,25 @@ module.exports = {
                 .setTitle("Inventory")
                 .setAuthor({name: interaction.user.displayName, iconURL: interaction.user.iconURL})
                 .setDescription("Balance: $" + inv.balance);
+                let sortedInv = [];
                 for (const u of inv.units) {
                     const unitQuery = {
                         guildId: interaction.guild.id,
                         unit: u.name,
                     }
                     const unit = await Gacha.findOne(unitQuery);
+                    sortedInv.push({
+                        name: u.name,
+                        quantity: u.quantity,
+                        rarity: unit.rarity,
+                        type: unit.type
+                    });
+                }
+                sortedInv.sort((a, b) => b.rarity - a.rarity);
+                for (const u of sortedInv) {
                     embed.addFields({
                         name: u.name + " x" + u.quantity,
-                        value: unit.rarity + "* " + unit.type,
+                        value: u.rarity + "* " + u.type,
                     });
                 }
                 interaction.reply({embeds: [embed]});
@@ -36,6 +46,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error viewing inventory: " + error);
+            interaction.reply("There was an error while trying to view your inventory. Please try again later.");
         }
     }
 }

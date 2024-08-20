@@ -34,16 +34,22 @@ module.exports = {
                 return;
             }
 
+            const bday = new Date(users[index].year, users[index].month - 1, users[index].day);
+            const options = {
+                month: 'long',
+                day: 'numeric',
+              };
+
             if (isBday) {
                 const bdayName = await interaction.guild.members.cache.get(users[index - 1].userId)?.displayName;
-                interaction.reply("Today is " + bdayName + "'s birthday! The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "!");
+                interaction.reply("Today is " + bdayName + "'s birthday! The next birthday is " + displayName + "'s on "  + bday.toLocaleDateString(undefined, options) + "!");
             } else {
-                interaction.reply("The next birthday is " + displayName + "'s on "  + users[index].month + "/" + users[index].day + "/" + users[index].year + "!");
+                interaction.reply("The next birthday is " + displayName + "'s on "  + bday.toLocaleDateString(undefined, options) + "!");
             }
             
         } catch (error) {
             console.log("Error viewing: " + error);
-            interaction.reply("An error occurred while trying to retrieve the next birthday.");
+            interaction.reply("There was an error while trying to view the next birthday. Please try again later.");
         }
     }
 }

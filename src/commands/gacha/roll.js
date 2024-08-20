@@ -1,9 +1,8 @@
 const { ApplicationCommandOptionType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
-const getRandomUnit = require('../../utils/getRandomUnit');
 const Inventory = require('../../models/inventory');
 const Gacha = require('../../models/gacha');
-
+const getRandomUnit = require('../../utils/getRandomUnit');
 
 module.exports = {
     name: "roll",
@@ -57,8 +56,9 @@ module.exports = {
                     let guaranteed = true;
                     for (let i = 1; i <= interaction.options.get("amount").value; i++) {
                         let gRarity = (i === 10 && guaranteed) ? 4 : 1;
+
                         const rolledUnit = await getRandomUnit(interaction, gRarity, inv);
-                        //console.log(rolledUnit);
+
                         const unitQuery = {
                             guildId: interaction.guild.id,
                             unit: rolledUnit,
@@ -73,7 +73,7 @@ module.exports = {
                         });
                         let hasObtained = false;
                         for (const u of inv.units) {
-                            if (u.name === rolledUnit) {
+                            if (u.name == rolledUnit) {
                                 u.quantity++;
                                 hasObtained = true;
                                 break;
@@ -83,6 +83,7 @@ module.exports = {
                             inv.units.push({name: rolledUnit, quantity: 1});
                         }
                     }
+                    inv.markModified("units");
                     await inv.save();
                     interaction.reply({embeds: [embed]});
                 } else {
@@ -93,6 +94,7 @@ module.exports = {
             }
         } catch (error) {
             console.log("Error rolling for unit: " + error);
+            interaction.reply("There was an error while trying to roll for units. Please try again later.");
         }
     }
 }
