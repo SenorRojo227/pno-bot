@@ -22,6 +22,10 @@ const inventorySchema = new Schema({
     lastDaily: {
         type: Date,
         required: true,
+    },
+    rolls: {
+        type: Number,
+        default: 0,
     }
 });
 

@@ -1,11 +1,28 @@
 const Gacha = require('../models/gacha');
 const rates = [0.6, 0.25, 0.1, 0.045, 0.005];
+const pityThreshold = 60;
 
-module.exports = async (interaction, guaranteed = 1) => {
-    
+module.exports = async (interaction, guaranteed = 1, inv) => {
+    const pityQuery = {
+        guildId: interaction.guild.id,
+        rarity: 5
+    };
+
+    let pity = inv.rolls >= pityThreshold;
+
+    if (pity) {
+        const highRarityUnits = await Gacha.find(pityQuery);
+        const unit = highRarityUnits[Math.floor(Math.random() * highRarityUnits.length)];
+
+        inv.rolls = 0;
+
+        return unit.unit;
+    }
+
     const unitQuery = {
         guildId: interaction.guild.id,
     };
+
     let prob = (guaranteed === 1) ? Math.random() : (1 - (Math.random() % rates[guaranteed - 1]));
     
     const banner = interaction.options.get("banner").value;
