@@ -1,11 +1,11 @@
 require('dotenv').config();
 const { EmbedBuilder } = require('discord.js');
-const { MongoClient } = require('mongoDB');
-const { MongoCron } = require('mongodb-cron');
+//const { MongoClient } = require('mongoDB');
+//const { MongoCron } = require('mongodb-cron');
 
 module.exports = async (user, month, day) => {
-    const bdayEmbed = new EmbedBuilder().setImage("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBscTI1dWxheGpidG9tenhieDc4d3Jycmlvc3VxZzhua2dmdDNzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OFgs54RnIQcOWoI4pO/giphy.gif");
-    /*MongoClient.connect(process.env.MONGODB_URI, async (err, client) => {
+    /*const bdayEmbed = new EmbedBuilder().setImage("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTBscTI1dWxheGpidG9tenhieDc4d3Jycmlvc3VxZzhua2dmdDNzaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OFgs54RnIQcOWoI4pO/giphy.gif");
+    MongoClient.connect(process.env.MONGODB_URI, async (err, client) => {
         if (err) throw err;
       
         const bdayCollection = client.db("test").collection("birthdays");
@@ -30,7 +30,8 @@ module.exports = async (user, month, day) => {
             interval: '00 * * * * *',
         });
     });
-    */
+    
+    //Working Code
     const mongo = await MongoClient.connect(process.env.MONGODB_URI);
     const bdayCollection = mongo.db("test").collection("birthdays");
     console.log();
@@ -53,4 +54,5 @@ module.exports = async (user, month, day) => {
         //interval: '00 37 21 ' + day + ' ' + month + ' *',
         interval: '00 * * * * *',
     });
+    */
 }
