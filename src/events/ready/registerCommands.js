@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config();
 const getLocalCommands = require('../../utils/getLocalCommands');
 const getApplicationCommands = require('../../utils/getApplicationCommands');
 const areCommandsDifferent = require('../../utils/areCommandsDifferent');

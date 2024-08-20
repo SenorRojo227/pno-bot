@@ -16,9 +16,15 @@ module.exports = {
             for (const u of users) {
                 try {
                     const member = await interaction.guild.members.cache.get(u.userId);
+                    const date = new Date(u.year, u.month - 1, u.day);
+                    const options = {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric',
+                      };
                     embed.addFields({
                         name: member.displayName,
-                        value: u.month + "/" + u.day,
+                        value: date.toLocaleDateString(undefined, options),
                     });
                 } catch (error) {
                     console.log(error);

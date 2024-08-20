@@ -1,5 +1,6 @@
 const { ApplicationCommandOptionType } = require('discord.js');
 const Birthday = require('../../models/birthday');
+const scheduleBday = require('../../utils/scheduleBday');
 
 module.exports = {
     name: "setbday",
@@ -87,6 +88,7 @@ module.exports = {
                 user.day = interaction.options.get("day").value;
                 user.month = interaction.options.get("month").value;
                 user.year = interaction.options.get("year").value;
+                //scheduleBday(interaction.user, interaction.options.get("month").value, interaction.options.get("day").value);
                 await user.save();
                 interaction.reply("Your birthday has been updated successfully!");
             } else {
@@ -97,12 +99,13 @@ module.exports = {
                     month: interaction.options.get("month").value,
                     year: interaction.options.get("year").value,
                 });
+                //scheduleBday(interaction.options.get("month").value, interaction.options.get("day").value);
                 await newUser.save();
                 interaction.reply("Your birthday has been set successfully!");
             }
         } catch (error) {
             console.log("Error setting birthday: " + error);
-            interaction.reply("There was an error while trying to set you birthday. Please try again later.");
+            interaction.reply("There was an error while trying to set your birthday. Please try again later.");
         }
     }
 }

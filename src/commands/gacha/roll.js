@@ -1,9 +1,8 @@
 const { ApplicationCommandOptionType } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
-const getRandomUnit = require('../../utils/getRandomUnit');
 const Inventory = require('../../models/inventory');
 const Gacha = require('../../models/gacha');
-
+const getRandomUnit = require('../../utils/getRandomUnit');
 
 module.exports = {
     name: "roll",
