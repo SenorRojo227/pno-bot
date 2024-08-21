@@ -20,6 +20,10 @@ const birthdaySchema = new Schema({
     year: {
         type: Number,
         required: true,
+    },
+    cronJob: {
+        type: Object,
+        required: false
     }
 });
 

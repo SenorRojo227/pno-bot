@@ -13,6 +13,7 @@ module.exports = {
         try {
             const user = await Birthday.findOne(query);
             if (user) {
+                user.cronJob?.stop();
                 await Birthday.deleteOne(query);
                 interaction.reply("Your birthday has been removed.");
             } else {

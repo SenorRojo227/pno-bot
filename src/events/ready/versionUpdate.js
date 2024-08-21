@@ -2,6 +2,10 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.1.2": [
+        "- Added a pity system for the gacha",
+        "- Automatically send birthday messages in #announcements",
+    ],
     "2.1.1": [
         "- Sorted member's inventories automatically",
         "- Added the written out dates to birthday replies",

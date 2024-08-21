@@ -88,7 +88,7 @@ module.exports = {
                 user.day = interaction.options.get("day").value;
                 user.month = interaction.options.get("month").value;
                 user.year = interaction.options.get("year").value;
-                //scheduleBday(interaction.user, interaction.options.get("month").value, interaction.options.get("day").value);
+                scheduleBday(client, interaction.user, user);
                 await user.save();
                 interaction.reply("Your birthday has been updated successfully!");
             } else {
@@ -99,7 +99,7 @@ module.exports = {
                     month: interaction.options.get("month").value,
                     year: interaction.options.get("year").value,
                 });
-                //scheduleBday(interaction.options.get("month").value, interaction.options.get("day").value);
+                scheduleBday(client, interaction.user, newUser);
                 await newUser.save();
                 interaction.reply("Your birthday has been set successfully!");
             }
