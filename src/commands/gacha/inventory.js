@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 const Inventory = require('../../models/inventory');
-const Gacha = require('../../models/gacha');
+const getUnits = require('../../utils/getUnits');
 
 module.exports = {
     name: "inventory",
@@ -20,15 +20,18 @@ module.exports = {
                 .setAuthor({name: interaction.user.displayName, iconURL: interaction.user.iconURL})
                 .setDescription("Balance: $" + inv.balance);
                 let sortedInv = [];
-                for (const u of inv.units) {
-                    const unitQuery = {
-                        guildId: interaction.guild.id,
-                        unit: u.name,
+                for (const i of inv.units) {
+                    let units = getUnits();
+                    let unit;
+                    for (const u of units) {
+                        if (i.name == u.name) {
+                            unit = u;
+                            break;
+                        }
                     }
-                    const unit = await Gacha.findOne(unitQuery);
                     sortedInv.push({
-                        name: u.name,
-                        quantity: u.quantity,
+                        name: i.name,
+                        quantity: i.quantity,
                         rarity: unit.rarity,
                         type: unit.type
                     });
@@ -37,7 +40,7 @@ module.exports = {
                 for (const u of sortedInv) {
                     embed.addFields({
                         name: u.name + " x" + u.quantity,
-                        value: u.rarity + "* " + u.type,
+                        value: u.rarity + "* "  + u.type,
                     });
                 }
                 interaction.reply({embeds: [embed]});

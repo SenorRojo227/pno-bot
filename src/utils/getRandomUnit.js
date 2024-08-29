@@ -1,55 +1,48 @@
-const Gacha = require('../models/gacha');
-const rates = [0.6, 0.25, 0.1, 0.045, 0.005];
-const pityThreshold = 60;
+const rates = [
+    0.004,  //Spotlight
+    0.6,    //1*
+    0.25,   //2*
+    0.1,    //3*
+    0.045,  //4*
+    0.001   //5*
+];
 
-module.exports = async (interaction, guaranteed = 1, inv) => {
-    const pityQuery = {
-        guildId: interaction.guild.id,
-        rarity: 5
-    };
+module.exports = (guaranteed = 1, banner) => {
 
-    let pity = inv.rolls >= pityThreshold;
-
-    if (pity) {
-        const highRarityUnits = await Gacha.find(pityQuery);
-        const unit = highRarityUnits[Math.floor(Math.random() * highRarityUnits.length)];
-
-        inv.rolls = 0;
-
-        return unit.unit;
+    //Get Random Probability
+    let prob = Math.random();
+    if (guaranteed >= 4) {
+        prob = 1 - (prob % rates[guaranteed] + (guaranteed === 5 ? rates[0] : 0));
     }
-
-    const unitQuery = {
-        guildId: interaction.guild.id,
-    };
-
-    let prob = (guaranteed === 1) ? Math.random() : (1 - (Math.random() % rates[guaranteed - 1]));
     
-    const banner = interaction.options.get("banner").value;
-    switch(banner) {
-        case 1:
-            unitQuery.expansion = 1;
-            break;
-    }
-    const units = await Gacha.find(unitQuery).sort('rarity type unit');
-    let rarities = {};
-    for (const unit of units) {
-        rarities[unit.rarity] = rarities[unit.rarity] ? rarities[unit.rarity] + 1 : 1;
+    //Number of Units per Rarity
+    let numUnits = [banner.spotlightUnits.length];
+    for (const unit of banner.regularUnits) {
+        numUnits[unit.rarity] = numUnits[unit.rarity] ? numUnits[unit.rarity] + 1 : 1;
     }
 
-    //Calculate Probability
     let rolledUnit;
-    //console.log("Starting Probability: " + prob);
-    for (const unit of units) {
-        //Subtract probability from individual rates
-        prob -= (rates[unit.rarity - 1] / rarities[unit.rarity]);
-        //console.log("Skipped: " + unit.unit + "\nCurrent Probability: " + prob);
+    //Calculate Spotlight Probabilities
+    //DEBUG: console.log("Starting Probability: " + prob);
+    for (const unit of banner.spotlightUnits) {
+        prob -= (rates[0] / numUnits[0]);
 
-        //Break once probability reaches 0
         if (prob < 0) {
-            rolledUnit = unit.unit;
+            rolledUnit = unit;
             break;
         }
+        //DEBUG: console.log("Skipped: " + unit.name + "\nCurrent Probability: " + prob);
+    }
+
+    //Calculate Regular Probabilities
+    for (const unit of banner.regularUnits) {
+        prob -= (rates[unit.rarity] / numUnits[unit.rarity]);
+
+        if (prob < 0) {
+            rolledUnit = unit;
+            break;
+        }
+        //DEBUG: console.log("Skipped: " + unit.name + "\nCurrent Probability: " + prob);
     }
     return rolledUnit;
 }

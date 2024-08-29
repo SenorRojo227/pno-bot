@@ -2,6 +2,10 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.2.0": [
+        "- Begun preparing bot for v3.0.0",
+        "- Added the /viewUnit command to see more information about a unit",
+    ],
     "2.1.2": [
         "- Added a pity system for the gacha",
         "- Automatically send birthday messages in #announcements",

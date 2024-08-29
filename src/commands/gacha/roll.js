@@ -1,8 +1,9 @@
-const { ApplicationCommandOptionType } = require('discord.js');
-const { EmbedBuilder } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const Inventory = require('../../models/inventory');
-const Gacha = require('../../models/gacha');
+const Banners = require('../../data/banners');
+const getBannerNames = require('../../utils/getBannerNames');
 const getRandomUnit = require('../../utils/getRandomUnit');
+const pityThreshold = 60;
 
 module.exports = {
     name: "roll",
@@ -12,17 +13,12 @@ module.exports = {
             name: "banner",
             description: "Choose the banner you would like to roll on.",
             type: ApplicationCommandOptionType.Number,
-            choices: [
-                {
-                    name: "PNO Beginnings",
-                    value: 1,
-                },
-            ],
+            choices: getBannerNames(),
             required: true,
         },
         {
             name: "amount",
-            description: "Choose how many times you would like to roll",
+            description: "Choose how many times you would like to roll.",
             type: ApplicationCommandOptionType.Number,
             choices: [
                 {
@@ -49,38 +45,40 @@ module.exports = {
             if (inv) {
                 if (inv.balance >= interaction.options.get("amount").value * 10) {
                     inv.balance -= interaction.options.get("amount").value * 10;
-                    inv.rolls += 1;
                     const embed = new EmbedBuilder()
                     .setTitle("Rolls x" + interaction.options.get("amount").value);
                     
                     let guaranteed = true;
+                    let gRarity = 1;
                     for (let i = 1; i <= interaction.options.get("amount").value; i++) {
-                        let gRarity = (i === 10 && guaranteed) ? 4 : 1;
-
-                        const rolledUnit = await getRandomUnit(interaction, gRarity, inv);
-
-                        const unitQuery = {
-                            guildId: interaction.guild.id,
-                            unit: rolledUnit,
+                        inv.rolls += 1;
+                        if (inv.rolls >= pityThreshold) {
+                            gRarity = 5;
+                            guaranteed = false;
+                            inv.rolls = 0;
+                        } else {
+                            gRarity = (i === 10 && guaranteed) ? 4 : 1;
                         }
-                        const unit = await Gacha.findOne(unitQuery);
-                        if (unit.rarity >= 4) {
+
+                        const rolledUnit = getRandomUnit(gRarity, Banners[interaction.options.get("banner").value - 1]);
+
+                        if (rolledUnit.rarity >= 4) {
                             guaranteed = false;
                         }
                         embed.addFields({
                             name: "Unit #" + i,
-                            value: rolledUnit + " (" + unit.rarity + "*)",
+                            value: rolledUnit.name + " (" + rolledUnit.rarity + "*)",
                         });
                         let hasObtained = false;
                         for (const u of inv.units) {
-                            if (u.name == rolledUnit) {
+                            if (u.name == rolledUnit.name) {
                                 u.quantity++;
                                 hasObtained = true;
                                 break;
                             }
                         }
                         if (!hasObtained) {
-                            inv.units.push({name: rolledUnit, quantity: 1});
+                            inv.units.push({name: rolledUnit.name, quantity: 1});
                         }
                     }
                     inv.markModified("units");
