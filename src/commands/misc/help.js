@@ -10,23 +10,23 @@ module.exports = {
             .setTitle("Birthday Tips")
             .setDescription("These commands allow users to manage and view their birthdays.")
             .addFields({
-                name: "/setBday [Day] [Month] [Year]",
+                name: "/setbday [Day] [Month] [Year]",
                 value: "A command that creates or edits the user's birthday.",
             })
             .addFields({
-                name: "/viewBday [User]",
+                name: "/viewbday [User]",
                 value: "A command that shows the birthday of a selected user.",
             })
             .addFields({
-                name: "/viewBdayList",
+                name: "/viewbdaylist",
                 value: "A command that shows all of the birthdays in the server.",
             })
             .addFields({
-                name: "/nextBday",
+                name: "/nextbday",
                 value: "A command that shows the next user's birthday.",
             })
             .addFields({
-                name: "/removeBday",
+                name: "/removebday",
                 value: "A command that removes the user's birthday.",
             });
         const gachaEmbed = new EmbedBuilder()
@@ -43,6 +43,17 @@ module.exports = {
             .addFields({
                 name: "/inventory",
                 value: "A command that shows the user's inventory and balance.",
+            })
+            .addFields({
+                name: "/viewunit",
+                value: "A command that shows additional information about a unit",
+            });
+        const gameEmbed = new EmbedBuilder()
+            .setTitle("Gacha Tips")
+            .setDescription("These commands allow users to roll for their favorite PNO Members.")
+            .addFields({
+                name: "/teambuilder",
+                value: "A command that opens a hidden teambuilder.",
             });
         const miscEmbed = new EmbedBuilder()
             .setTitle("Miscellaneous Tips")
@@ -56,6 +67,6 @@ module.exports = {
                 value: "A command that displays a random Aatrox or Pantheon quote.",
             });
         interaction.reply("A DM has been sent to you!");
-        await interaction.user.send({embeds: [bdayEmbed, gachaEmbed, miscEmbed]});
+        await interaction.user.send({embeds: [bdayEmbed, gachaEmbed, gameEmbed, miscEmbed]});
     }
 }
