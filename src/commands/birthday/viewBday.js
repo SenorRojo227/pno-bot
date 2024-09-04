@@ -1,5 +1,5 @@
 const { ApplicationCommandOptionType } = require('discord.js');
-const calculateAge = require('../../utils/calculateAge');
+const calculateAge = require('../../utils/birthday/calculateAge');
 const Birthday = require('../../models/birthday');
 
 module.exports = {

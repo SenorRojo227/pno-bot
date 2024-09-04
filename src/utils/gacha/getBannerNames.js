@@ -1,4 +1,4 @@
-const banners = require("../data/banners");
+const banners = require("../../data/banners");
 
 module.exports = () => {
     let output = [];

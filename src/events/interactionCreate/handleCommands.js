@@ -1,5 +1,5 @@
 require('dotenv').config()
-const getLocalCommands = require('../../utils/getLocalCommands');
+const getLocalCommands = require('../../utils/misc/getLocalCommands');
 
 module.exports = async (client, interaction) => {
     if (!interaction.isChatInputCommand()) return;
@@ -13,7 +13,7 @@ module.exports = async (client, interaction) => {
 
         if (!commandObject) return;
 
-        if (interaction.guild.id != process.env.GUILD_ID) return;
+        if (process.env.IS_LOCAL == "FALSE" && interaction.guild.id != process.env.TEST_ID) return;
 
         if (commandObject.testOnly) {
             if(interaction.guild.id != process.env.TEST_ID) {

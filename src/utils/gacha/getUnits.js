@@ -1,6 +1,6 @@
-const members = require("../data/members");
-const items = require("../data/items");
-const stances = require("../data/stances");
+const members = require("../../data/members");
+const items = require("../../data/items");
+const stances = require("../../data/stances");
 
 module.exports = (areChoices = false) => {
     let memberArr = Object.values(members);

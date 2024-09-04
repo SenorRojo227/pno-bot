@@ -1,6 +1,7 @@
 const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
-const getUnits = require('../../utils/getUnits');
-const getBars = require('../../utils/getBars');
+const Inventory = require('../../models/inventory');
+const getUnits = require('../../utils/gacha/getUnits');
+const getBars = require('../../utils/gacha/getBars');
 
 module.exports = {
     name: "viewunit",
@@ -16,9 +17,9 @@ module.exports = {
     ],
 
     callback: (client, interaction) => {
-    //try {
+    try {
             let units = getUnits();
-            let unit;
+            let unit, level;
             for (const u of units) {
                 if (u.name == interaction.options.get("unit").value) {
                     unit = u;
@@ -60,7 +61,17 @@ module.exports = {
                             getBars(unit.stats.logic) + "\n" + 
                             getBars(unit.stats.agility),
                         inline: true
-                    });
+                    }/*,
+                    {
+                        name: "Skills",
+                        value: unit.skills[0].name,
+                        inline: true
+                    },
+                    {
+                        name: "\u200b",
+                        value: unit.skills[1].name,
+                        inline: true
+                    }*/);
                     break;
                 case "Item":
                     break;
@@ -68,9 +79,9 @@ module.exports = {
                     break;
             }
             interaction.reply({embeds: [embed]});
-        /*} catch (error) {
+        } catch (error) {
             console.log("Error viewing unit: " + error);
             interaction.reply("There was an error while trying to view this unit. Please try again later.");
-        }*/
+        }
     }
 }

@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 const Inventory = require('../../models/inventory');
-const getUnits = require('../../utils/getUnits');
+const getUnits = require('../../utils/gacha/getUnits');
 
 module.exports = {
     name: "inventory",

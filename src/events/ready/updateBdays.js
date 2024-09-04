@@ -1,5 +1,5 @@
 const Birthday = require('../../models/birthday');
-const scheduleBday = require('../../utils/scheduleBday');
+const scheduleBday = require('../../utils/birthday/scheduleBday');
 
 module.exports = async (client) => {
     try {

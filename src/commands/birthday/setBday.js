@@ -1,6 +1,6 @@
 const { ApplicationCommandOptionType } = require('discord.js');
 const Birthday = require('../../models/birthday');
-const scheduleBday = require('../../utils/scheduleBday');
+const scheduleBday = require('../../utils/birthday/scheduleBday');
 
 module.exports = {
     name: "setbday",

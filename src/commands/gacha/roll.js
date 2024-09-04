@@ -1,8 +1,8 @@
 const { ApplicationCommandOptionType, EmbedBuilder } = require('discord.js');
 const Inventory = require('../../models/inventory');
 const Banners = require('../../data/banners');
-const getBannerNames = require('../../utils/getBannerNames');
-const getRandomUnit = require('../../utils/getRandomUnit');
+const getBannerNames = require('../../utils/gacha/getBannerNames');
+const getRandomUnit = require('../../utils/gacha/getRandomUnit');
 const pityThreshold = 60;
 
 module.exports = {

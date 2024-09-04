@@ -88,13 +88,14 @@ module.exports = {
         colors: ["Pink", "Gray"],
         rarity: 3,
         gender: null,
+        img: "https://cdn.discordapp.com/avatars/432610292342587392/29cb28fbf65a3958105026ab03abd306.png?size=4096",
         stats: {
-            health: 5,
-            strength: 5,
-            fortitude: 5,
-            passion: 5,
-            logic: 5,
-            agility: 5
+            health: 11,
+            strength: 4,
+            fortitude: 4,
+            passion: 12,
+            logic: 8,
+            agility: 13
         },
         stances: [],
         skills: [],
@@ -104,13 +105,14 @@ module.exports = {
         colors: ["Black", "Gray"],
         rarity: 3,
         gender: null,
+        img: "https://cdn.discordapp.com/attachments/324586503856717836/1262435408172679168/image.png?ex=66d5de18&is=66d48c98&hm=7e0a48520312f3384712451deabea45bdb119dc0085dc42503ee6a392566fbc6&",
         stats: {
-            health: 5,
-            strength: 5,
-            fortitude: 5,
-            passion: 5,
-            logic: 5,
-            agility: 5
+            health: 8,
+            strength: 6,
+            fortitude: 13,
+            passion: 6,
+            logic: 13,
+            agility: 6
         },
         stances: [],
         skills: [],
@@ -125,7 +127,7 @@ module.exports = {
             strength: 5,
             fortitude: 15,
             passion: 12,
-            logic: 6,
+            logic: 7,
             agility: 5
         },
         stances: [stances.artist],
@@ -136,6 +138,7 @@ module.exports = {
         colors: ["Pink"],
         rarity: 4,
         gender: "Female",
+        img: "https://upload.wikimedia.org/wikipedia/commons/6/62/240329_Kim_Chae-won_%281%29.jpg",
         stats: {
             health: 11,
             strength: 4,
@@ -175,7 +178,7 @@ module.exports = {
             fortitude: 5,
             passion: 14,
             logic: 5,
-            agility: 12
+            agility: 15
         },
         stances: [],
         skills: [],
@@ -201,6 +204,7 @@ module.exports = {
         colors: ["Black", "Red"],
         rarity: 4,
         gender: "Male",
+        img: "https://cdn.discordapp.com/attachments/343934085833555970/1274374970297810964/pikachu-sad.gif?ex=66d5cc2d&is=66d47aad&hm=3cd3462148a1fcc4cab7bb8de6b7f812b91a77d1c04a32fc783e6a74598120b2&",
         stats: {
             health: 6,
             strength: 15,
@@ -217,6 +221,7 @@ module.exports = {
         colors: ["Red", "Pink"],
         rarity: 4,
         gender: "Male",
+        img: "https://cdn.discordapp.com/attachments/1262547918179799080/1276017043199496202/anime-lagtrain.gif.5bc8ba5337c4f1ded18536a2f9ce1d29.gif?ex=66d1397a&is=66cfe7fa&hm=0dcbaa2844f76c3dc4b68dd06d8e4f666cef378ae7654795497c5bb462713834&",
         stats: {
             health: 14,
             strength: 6,
@@ -230,14 +235,14 @@ module.exports = {
     },
     joy: {
         name: "Joy",
-        colors: ["Pink", "Blue"],
+        colors: ["Pink", "Yellow"],
         rarity: 4,
         gender: "Female",
         stats: {
             health: 8,
             strength: 6,
             fortitude: 6,
-            passion: 13,
+            passion: 16,
             logic: 10,
             agility: 14
         },
@@ -249,9 +254,10 @@ module.exports = {
         colors: ["Red", "Green"],
         rarity: 4,
         gender: "Male",
+        img: "https://cdn.discordapp.com/attachments/1253541184463310848/1277530847037231165/nQXSAyfz_400x400.png?ex=66d6bb51&is=66d569d1&hm=2f05b9e14fa064258ce10a58218400ddcf3001c4f829604ec91c5524748d1739&",
         stats: {
             health: 16,
-            strength: 13,
+            strength: 17,
             fortitude: 12,
             passion: 6,
             logic: 8,

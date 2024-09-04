@@ -65,17 +65,25 @@ module.exports = (client) => {
     }
 
     //Find Channel
-    let channel;
-    if (process.env.GUILD_ID != process.env.TEST_ID) {
-        channel = client.channels.cache.get("1272730506248716352");
+    let channels;
+    if (process.env.IS_LOCAL == "TRUE") {
+        channels = [
+            client.channels.cache.get("1272739949447479316")
+        ];
     } else {
-        channel = client.channels.cache.get("1272739949447479316");
+        channels = [
+            client.channels.cache.get("1272730506248716352"),
+            client.channels.cache.get("1280335112248103006")
+        ];
     }
+
     //Post
-    channel.messages.fetch({limit: 1}).then(messages => {
-        let lastMessage = messages.first();
-        if (!lastMessage.content.includes(pjson.version)) {
-            channel.send(vMsg);
-        }
-    })
+    for (const channel of channels) {
+        channel.messages.fetch({limit: 1}).then(messages => {
+            let lastMessage = messages.first();
+            if (!lastMessage.content.includes(pjson.version)) {
+                channel.send(vMsg);
+            }
+        });
+    }
 }
