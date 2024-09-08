@@ -2,6 +2,15 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.2.2": [
+        "- Fixed a bug that created duplicate commands",
+    ],
+    "2.2.1": [
+        "- Reset Inventories",
+        "- Added more information to the /viewUnit command",
+        "- Changed Minecraft Goon to Anime Goon",
+        "- Fixed a bug that prevented /roll from working as intended",
+    ],
     "2.2.0": [
         "- Begun preparing bot for v3.0.0",
         "- Added the /viewUnit command to see more information about a unit",

@@ -6,7 +6,7 @@ const areCommandsDifferent = require('../../utils/misc/areCommandsDifferent');
 module.exports = async (client) => {
     try {
         const localCommands = getLocalCommands();
-        const applicationCommands = await getApplicationCommands(client);
+        const applicationCommands = await getApplicationCommands(client, process.env.TEST_ID);
 
         for (const localCommand of localCommands) {
             const {name, description, options} = localCommand;

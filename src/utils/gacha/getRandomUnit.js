@@ -1,9 +1,9 @@
 const rates = [
-    0.004,  //Spotlight
+    0,  //Spotlight
     0.6,    //1*
     0.25,   //2*
     0.1,    //3*
-    0.045,  //4*
+    0.049,  //4*
     0.001   //5*
 ];
 
@@ -20,16 +20,14 @@ module.exports = (guaranteed = 1, banner) => {
     for (const unit of banner.regularUnits) {
         numUnits[unit.rarity] = numUnits[unit.rarity] ? numUnits[unit.rarity] + 1 : 1;
     }
-
-    let rolledUnit;
     //Calculate Spotlight Probabilities
     //DEBUG: console.log("Starting Probability: " + prob);
     for (const unit of banner.spotlightUnits) {
         prob -= (rates[0] / numUnits[0]);
 
         if (prob < 0) {
-            rolledUnit = unit;
-            break;
+            //DEBUG: console.log("Chosen: " + unit.name);
+            return unit;
         }
         //DEBUG: console.log("Skipped: " + unit.name + "\nCurrent Probability: " + prob);
     }
@@ -39,10 +37,9 @@ module.exports = (guaranteed = 1, banner) => {
         prob -= (rates[unit.rarity] / numUnits[unit.rarity]);
 
         if (prob < 0) {
-            rolledUnit = unit;
-            break;
+            //DEBUG: console.log("Chosen: " + unit.name);
+            return unit;
         }
         //DEBUG: console.log("Skipped: " + unit.name + "\nCurrent Probability: " + prob);
     }
-    return rolledUnit;
 }

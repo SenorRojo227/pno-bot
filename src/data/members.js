@@ -17,7 +17,18 @@ module.exports = {
             agility: 8
         },
         stances: [],
-        skills: [skills.punch],
+        skills: [
+            skills.punch,
+            skills.skullReact,
+            skills.banter,
+            skills.emojiConnoisseur,
+            skills.capsLock,
+            skills.spamPing,
+            skills.hypeUp,
+            skills.flame,
+            skills.headbutt,
+            skills.warmWelcome
+        ]
     },
     discordBot: {
         name: "Discord Bot",
@@ -33,23 +44,45 @@ module.exports = {
             agility: 6
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.prune,
+            skills.spamPing,
+            skills.kick,
+            skills.messageDelay,
+            skills.botPerms,
+            skills.slashTrap,
+            skills.warn,
+            skills.ghost,
+            skills.logOff,
+            skills.banFrenzy
+        ]
     },
     leagueGoon: {
         name: "League Goon",
-        colors: ["Black"],
+        colors: ["Red"],
         rarity: 2,
         gender: null,
         stats: {
-            health: 5,
-            strength: 12,
+            health: 9,
+            strength: 8,
             fortitude: 5,
             passion: 10,
-            logic: 7,
+            logic: 10,
             agility: 9
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.banter,
+            skills.flame,
+            skills.lockIn,
+            skills.skullReact,
+            skills.squareUp,
+            skills.gank,
+            skills.bonk,
+            skills.roam,
+            skills.powerspike,
+            skills.oneVsNineCarry
+        ],
     },
     pokemonGoon: {
         name: "Pokemon Goon",
@@ -58,8 +91,8 @@ module.exports = {
         gender: null,
         stats: {
             health: 8,
-            strength: 6,
-            fortitude: 7,
+            strength: 9,
+            fortitude: 4,
             passion: 12,
             logic: 11,
             agility: 7
@@ -67,18 +100,19 @@ module.exports = {
         stances: [],
         skills: [],
     },
-    minecraftGoon: {
-        name: "Minecraft Goon",
-        colors: ["Blue"],
+    animeGoon: {
+        name: "Anime Goon",
+        colors: ["Black"],
         rarity: 2,
         gender: null,
+        img: "https://i.pinimg.com/736x/24/e1/1e/24e11e8df73186b41088e48f8342e994.jpg",
         stats: {
-            health: 8,
+            health: 6,
             strength: 10,
             fortitude: 13,
-            passion: 3,
-            logic: 7,
-            agility: 5
+            passion: 9,
+            logic: 3,
+            agility: 10
         },
         stances: [],
         skills: [],
@@ -180,14 +214,14 @@ module.exports = {
             logic: 5,
             agility: 15
         },
-        stances: [],
+        stances: [stances.king],
         skills: [],
     },
     fincayran: {
         name: "Fincayran",
         colors: ["Green", "Black"],
         rarity: 4,
-        gender: "Male",
+        gender: "Female",
         stats: {
             health: 10,
             strength: 11,
@@ -196,7 +230,7 @@ module.exports = {
             logic: 16,
             agility: 14
         },
-        stances: [],
+        stances: [stances.bartender],
         skills: [],
     },
     leo: {
@@ -211,9 +245,9 @@ module.exports = {
             fortitude: 6,
             passion: 6,
             logic: 9,
-            agility: 17
+            agility: 16
         },
-        stances: [],
+        stances: [stances.pengu],
         skills: [],
     },
     james: {
@@ -230,7 +264,7 @@ module.exports = {
             logic: 7,
             agility: 10
         },
-        stances: [],
+        stances: [stances.queen],
         skills: [],
     },
     joy: {
@@ -246,7 +280,7 @@ module.exports = {
             logic: 10,
             agility: 14
         },
-        stances: [],
+        stances: [stances.mergeAddict],
         skills: [],
     },
     pyro: {
@@ -263,7 +297,7 @@ module.exports = {
             logic: 8,
             agility: 4
         },
-        stances: [],
+        stances: [stances.mordekaiser],
         skills: [],
     }
 }

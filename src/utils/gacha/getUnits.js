@@ -2,7 +2,7 @@ const members = require("../../data/members");
 const items = require("../../data/items");
 const stances = require("../../data/stances");
 
-module.exports = (areChoices = false) => {
+module.exports = () => {
     let memberArr = Object.values(members);
     let itemArr = Object.values(items);
     let stanceArr = Object.values(stances);
@@ -18,16 +18,5 @@ module.exports = (areChoices = false) => {
 
     let unitArr = memberArr.concat(itemArr);
     unitArr = unitArr.concat(stanceArr);
-    let output = [];
-    if (areChoices) {
-        for (const u of unitArr) {
-            output.push({
-                name: u.name,
-                value: u.name,
-            });
-        }
-    } else {
-        output = unitArr;
-    }
-    return output;
+    return unitArr;
 }

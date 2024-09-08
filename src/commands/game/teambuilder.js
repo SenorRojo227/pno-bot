@@ -7,6 +7,7 @@ const {
     ComponentType
 } = require('discord.js');
 const Inventory = require('../../models/inventory');
+const getUnits = require('../../utils/gacha/getUnits');
 
 module.exports = {
     name: "teambuilder",
@@ -42,23 +43,29 @@ module.exports = {
         try {
             const inv = await Inventory.findOne(query);
             if (inv) {
-                const test = [
-                    {
-                        label: "Dog",
-                        description: "I am a dog.",
-                        value: "dog"
+                let members = [];
+                const units = getUnits();
+                for (const i of inv.units) {
+                    for (const u of units) {
+                        if (i.name == u.name && u.type == "Member") {
+                            members.push({
+                                label: u.name,
+                                description: u.rarity + " Star Member",
+                                value: u.name
+                            });
+                        }
                     }
-                ]
+                }
                 const memberSelectMenu = new StringSelectMenuBuilder()
                     .setCustomId(interaction.id)
-                    .setPlaceholder("Select a member...")
+                    .setPlaceholder("Select your 1st member...")
                     .setMinValues(0)
                     .setMaxValues(1)
-                    .addOptions(test.map((pet) =>
+                    .addOptions(members.map((member) =>
                         new StringSelectMenuOptionBuilder()
-                            .setLabel(pet.label)
-                            .setDescription(pet.description)
-                            .setValue(pet.value)
+                            .setLabel(member.label)
+                            .setDescription(member.description)
+                            .setValue(member.value)
                         )
                     );
                     
@@ -66,7 +73,7 @@ module.exports = {
                     .addComponents(memberSelectMenu);
                 
                 const embed = new EmbedBuilder()
-                    .setTitle("Team 1");
+                    .setTitle("Team " + interaction.options.get("team").value);
                 
                 interaction.reply({embeds: [embed], components: [actionRow], ephemeral: true})
             } else {

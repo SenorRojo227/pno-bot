@@ -49,8 +49,8 @@ module.exports = {
                 value: "A command that shows additional information about a unit",
             });
         const gameEmbed = new EmbedBuilder()
-            .setTitle("Gacha Tips")
-            .setDescription("These commands allow users to roll for their favorite PNO Members.")
+            .setTitle("Game Tips")
+            .setDescription("These commands allow users to build and battle with different teams.")
             .addFields({
                 name: "/teambuilder",
                 value: "A command that opens a hidden teambuilder.",

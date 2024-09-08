@@ -40,7 +40,7 @@ module.exports = {
             guildId: interaction.guild.id,
         };
 
-        try {
+        //try {
             const inv = await Inventory.findOne(invQuery);
             if (inv) {
                 if (inv.balance >= interaction.options.get("amount").value * 10) {
@@ -90,9 +90,9 @@ module.exports = {
             } else {
                 interaction.reply("You do not have an inventory set up yet! Use /daily to start earning money!");
             }
-        } catch (error) {
-            console.log("Error rolling for unit: " + error);
-            interaction.reply("There was an error while trying to roll for units. Please try again later.");
-        }
+        //} catch (error) {
+        //    console.log("Error rolling for unit: " + error);
+        //    interaction.reply("There was an error while trying to roll for units. Please try again later.");
+        //}
     }
 }
