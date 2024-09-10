@@ -136,7 +136,7 @@ module.exports = {
     },
     pnoBot: {
         name: "PNO Bot",
-        colors: ["Black", "Gray"],
+        colors: ["White", "Gray"],
         rarity: 3,
         gender: null,
         img: "https://cdn.discordapp.com/attachments/324586503856717836/1262435408172679168/image.png?ex=66d5de18&is=66d48c98&hm=7e0a48520312f3384712451deabea45bdb119dc0085dc42503ee6a392566fbc6&",
@@ -273,10 +273,10 @@ module.exports = {
         rarity: 4,
         gender: "Female",
         stats: {
-            health: 8,
+            health: 10,
             strength: 6,
-            fortitude: 6,
-            passion: 16,
+            fortitude: 8,
+            passion: 12,
             logic: 10,
             agility: 14
         },

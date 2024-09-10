@@ -3,7 +3,7 @@ const pjson = require('../../../package.json');
 
 const versions = {
     "2.2.2": [
-        "- Fixed a bug that created duplicate commands",
+        "- Fixed a bug that prevented certain rolls from saving",
     ],
     "2.2.1": [
         "- Reset Inventories",

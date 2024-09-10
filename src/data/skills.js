@@ -71,6 +71,14 @@ module.exports = {
         priority: 0,
         color: "White"
     },
+    clearingTwirl: {
+        name: "Clearing Twirl",
+        description: "Removes all hazards from the field.",
+        power: 0,
+        category: "Status",
+        priority: 0,
+        color: "Pink"
+    },
     concentrate: {
         name: "Concentrate",
         description: "Increases the user's Passion and Logic by 1 stage.",
@@ -180,7 +188,7 @@ module.exports = {
         description: "Forces the opposing unit to swap places with a random opposing unit.",
         power: 2,
         category: "Strength",
-        priority: -2,
+        priority: -1,
         color: "Gray"
     },
     kingsAura: {
@@ -217,7 +225,7 @@ module.exports = {
     },
     messageDelay: {
         name: "Message Delay",
-        description: "All targeted abilities land 1 turn later with 50% increased Power and -3 Priority.",
+        description: "All targeted skills land 1 turn later with 50% increased Power and -3 Priority.",
         power: 0,
         category: "Passive",
         priority: 0,
@@ -230,6 +238,22 @@ module.exports = {
         category: "Passive",
         priority: 0,
         color: "White"
+    },
+    plotArmor: {
+        name: "Plot Armor",
+        description: "If the user is hit with an attack that depletes their health from max HP, they survive with 1 HP.",
+        power: 0,
+        category: "Passive",
+        priority: 0,
+        color: "Black"
+    },
+    partnerBoost: {
+        name: "Partner Boost",
+        description: "The user deals 1.3x damage while having a Decoy active.",
+        power: 0,
+        category: "Passive",
+        priority: 0,
+        color: "Green"
     },
     powerspike: {
         name: "Powerspike",
@@ -292,7 +316,7 @@ module.exports = {
         description: "Heal the frontline unit on the next turn for 50% of the user's maximum health.",
         power: 0,
         category: "Status",
-        priority: -3,
+        priority: -2,
         color: "White"
     },
     seduction: {
@@ -302,6 +326,22 @@ module.exports = {
         category: "Passion",
         priority: 0,
         color: "Pink"
+    },
+    silentStrike: {
+        name: "Silent Strike",
+        description: "No additional effect",
+        power: 9,
+        category: "Strength",
+        priority: 0,
+        color: "Blue"
+    },
+    sillyAssault: {
+        name: "Silly Assault",
+        description: "Hits the opponent 2 to 5 times.",
+        power: 2,
+        category: "Strength",
+        priority: 0,
+        color: "Yellow"
     },
     skullReact: {
         name: "Skull React",
