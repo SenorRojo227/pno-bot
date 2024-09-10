@@ -14,8 +14,10 @@ module.exports = async (client) => {
             const existingCommand = await applicationCommands.cache.find(
                 (cmd) => cmd.name === name
             );
-            /*
             if (existingCommand) {
+                await applicationCommands.delete(existingCommand.id);
+                console.log("Command: " + name + " deleted successfully!");
+            }/*
                 if (localCommand.deleted) {
                     await applicationCommands.delete(existingCommand.id);
                     console.log("Command: " + name + " deleted successfully!");
@@ -44,9 +46,6 @@ module.exports = async (client) => {
 
                 console.log("Command: " + name + " registered successfully!");
             }*/
-            
-            await applicationCommands.delete(existingCommand.id);
-            console.log("Command: " + name + " deleted successfully!");
         }
     } catch (error) {
         console.log(error);
