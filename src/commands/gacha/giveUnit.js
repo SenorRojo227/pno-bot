@@ -10,20 +10,19 @@ module.exports = {
             name: "user",
             description: "Choose the user you would like to give a unit to.",
             type: ApplicationCommandOptionType.User,
-            required: true,
+            required: true
         },
         {
             name: "unit",
             description: "Choose the unit you would like to give.",
             type: ApplicationCommandOptionType.String,
-            required: true,
+            required: true
         },
         {
             name: "quantity",
             description: "Choose the quantity you would like to give.",
             type: ApplicationCommandOptionType.Number,
-            required: false,
-            default: 1
+            required: true
         },
     ],
     
