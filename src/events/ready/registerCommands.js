@@ -18,6 +18,7 @@ module.exports = async (client) => {
                 await applicationCommands.delete(existingCommand.id);
                 console.log("Command: " + name + " deleted successfully!");
             }/*
+                
                 if (localCommand.deleted) {
                     await applicationCommands.delete(existingCommand.id);
                     console.log("Command: " + name + " deleted successfully!");
