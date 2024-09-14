@@ -12,6 +12,7 @@ const getUnits = require('../../utils/gacha/getUnits');
 module.exports = {
     name: "teambuilder",
     description: "Edit a team in the teambuilder menu.",
+    deleted: true,
     options: [
         {
             name: "team",

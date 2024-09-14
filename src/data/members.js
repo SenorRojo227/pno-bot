@@ -35,6 +35,7 @@ module.exports = {
         colors: ["Gray"],
         rarity: 1,
         gender: null,
+        img: "https://styles.redditmedia.com/t5_3b1wr/styles/communityIcon_qdbg6bz0bud71.png",
         stats: {
             health: 10,
             strength: 6,
@@ -62,6 +63,7 @@ module.exports = {
         colors: ["Red"],
         rarity: 2,
         gender: null,
+        img: "https://i.pinimg.com/originals/fb/e5/72/fbe572e1faefa97388243a952acfbe93.jpg",
         stats: {
             health: 9,
             strength: 8,
@@ -75,7 +77,7 @@ module.exports = {
             skills.banter,
             skills.flame,
             skills.lockIn,
-            skills.skullReact,
+            skills.excercise,
             skills.squareUp,
             skills.gank,
             skills.bonk,
@@ -89,6 +91,7 @@ module.exports = {
         colors: ["Green"],
         rarity: 2,
         gender: null,
+        img: "https://pa1.aminoapps.com/6773/3cffca5c4d96c8d0e4593292e202a81c345ebae8_00.gif",
         stats: {
             health: 8,
             strength: 9,
@@ -124,12 +127,12 @@ module.exports = {
         gender: null,
         img: "https://cdn.discordapp.com/avatars/432610292342587392/29cb28fbf65a3958105026ab03abd306.png?size=4096",
         stats: {
-            health: 11,
-            strength: 4,
+            health: 9,
+            strength: 8,
             fortitude: 4,
             passion: 12,
             logic: 8,
-            agility: 13
+            agility: 11
         },
         stances: [],
         skills: [],
@@ -156,6 +159,7 @@ module.exports = {
         colors: ["Blue"],
         rarity: 4,
         gender: "Male",
+        img: "",
         stats: {
             health: 13,
             strength: 5,
@@ -178,7 +182,7 @@ module.exports = {
             strength: 4,
             fortitude: 13,
             passion: 10,
-            logic: 15,
+            logic: 13,
             agility: 18
         },
         stances: [stances.kpop],
@@ -206,6 +210,7 @@ module.exports = {
         colors: ["Red"],
         rarity: 4,
         gender: "Male",
+        img: "https://ih1.redbubble.net/image.2831760158.5296/flat,750x1000,075,t.jpg",
         stats: {
             health: 6,
             strength: 12,
@@ -222,6 +227,7 @@ module.exports = {
         colors: ["Green", "Black"],
         rarity: 4,
         gender: "Female",
+        img: "",
         stats: {
             health: 10,
             strength: 11,
@@ -272,15 +278,16 @@ module.exports = {
         colors: ["Pink", "Yellow"],
         rarity: 4,
         gender: "Female",
+        img: "",
         stats: {
-            health: 10,
-            strength: 6,
-            fortitude: 8,
+            health: 11,
+            strength: 9,
+            fortitude: 6,
             passion: 12,
             logic: 10,
-            agility: 14
+            agility: 13
         },
-        stances: [stances.mergeAddict],
+        stances: [stances.secondDinner],
         skills: [],
     },
     pyro: {

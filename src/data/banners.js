@@ -42,7 +42,7 @@ module.exports = [
             stances.bartender,
             stances.pengu,
             stances.queen,
-            stances.mergeAddict,
+            stances.secondDinner,
             stances.mordekaiser
         ]
     },

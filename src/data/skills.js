@@ -9,7 +9,7 @@ module.exports = {
     },
     banFrenzy: {
         name: "Ban Frenzy",
-        description: "The user becomes locked into this move for 2-3 turns.",
+        description: "The user becomes locked into this move for 3 turns.",
         power: 12,
         category: "Strength",
         priority: 0,
@@ -41,8 +41,8 @@ module.exports = {
     },
     bonk: {
         name: "Bonk",
-        description: "No additional effect.",
-        power: 9,
+        description: "Deals 1.5x damage if the opponent is holding an item. Removes items.",
+        power: 6,
         category: "Strength",
         priority: 0,
         color: "Pink"
@@ -121,8 +121,8 @@ module.exports = {
     },
     flame: {
         name: "Flame",
-        description: "The opponent becomes stressed.",
-        power: 5,
+        description: "Inflicts Stressed on the opponent.",
+        power: 4,
         category: "Passion",
         priority: 0,
         color: "Red"
@@ -177,7 +177,7 @@ module.exports = {
     },
     irlPoster: {
         name: "IRL Poster",
-        description: "Changes the channel to #irl upon switchin.",
+        description: "Doubles the Agility of the user in #irl.",
         power: 0,
         category: "Passive",
         priority: 0,
@@ -239,6 +239,14 @@ module.exports = {
         priority: 0,
         color: "White"
     },
+    orderUp: {
+        name: "Order Up",
+        description: "Heal the frontline unit on the next turn for 50% of the user's maximum health.",
+        power: 0,
+        category: "Status",
+        priority: 0,
+        color: "White"
+    },
     plotArmor: {
         name: "Plot Armor",
         description: "If the user is hit with an attack that depletes their health from max HP, they survive with 1 HP.",
@@ -271,9 +279,9 @@ module.exports = {
         priority: 0,
         color: "Gray"
     },
-    publicSpeaker: {
-        name: "Public Speaker",
-        description: "Doubles the Agility of the user in #vc.",
+    eventHoster: {
+        name: "Event Hoster",
+        description: "Changes the channel to #vc upon switchin.",
         power: 0,
         category: "Passive",
         priority: 0,
@@ -311,14 +319,6 @@ module.exports = {
         priority: 0,
         color: "Black"
     },
-    secondMeal: {
-        name: "Second Meal",
-        description: "Heal the frontline unit on the next turn for 50% of the user's maximum health.",
-        power: 0,
-        category: "Status",
-        priority: -2,
-        color: "White"
-    },
     seduction: {
         name: "Seduction",
         description: "Deals 1.5x Power against Male members and traps them.",
@@ -337,7 +337,7 @@ module.exports = {
     },
     sillyAssault: {
         name: "Silly Assault",
-        description: "Hits the opponent 2 to 5 times.",
+        description: "Hits the opponent 2 times. Inflicts Distracted.",
         power: 2,
         category: "Strength",
         priority: 0,
@@ -361,7 +361,7 @@ module.exports = {
     },
     spamPing: {
         name: "Spam Ping",
-        description: "Hits the opponent 2 to 5 times.",
+        description: "Hits the opponent 4 times.",
         power: 2,
         category: "Passion",
         priority: 0,

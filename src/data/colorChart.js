@@ -54,14 +54,14 @@ module.exports = {
         red: 2,
         blue: 2,
         green: 0.5,
-        yellow: 1,
+        yellow: 0.5,
         pink: 1,
-        black: 0.5,
+        black: 1,
         gray: 1
     },
     black: {
         white: 2,
-        red: 0.5,
+        red: 1,
         blue: 1,
         green: 0.5,
         yellow: 1,
@@ -71,11 +71,11 @@ module.exports = {
     },
     gray: {
         white: 1,
-        red: 1,
+        red: 0.5,
         blue: 1,
-        green: 1,
+        green: 2,
         yellow: 0.5,
-        pink: 2,
+        pink: 1,
         black: 2,
         gray: 0.5
     }

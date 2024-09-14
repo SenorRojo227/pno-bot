@@ -85,10 +85,10 @@ module.exports = {
             {passion: 3, logic: 1}
         ]
     },
-    mergeAddict: {
-        name: "Merge Addict",
+    secondDinner: {
+        name: "Second Dinner",
         member: "Joy",
-        colors: ["Pink","Gray"],
+        colors: ["Pink","Yellow"],
         rarity: 5,
         skills: [],
         statIncreases: [
