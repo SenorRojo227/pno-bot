@@ -2,6 +2,9 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.2.3": [
+        "- Added skills to /viewUnit command",
+    ],
     "2.2.2": [
         "- Fixed a bug that prevented certain rolls from saving",
     ],

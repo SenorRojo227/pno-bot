@@ -82,7 +82,7 @@ module.exports = {
             skills.gank,
             skills.bonk,
             skills.roam,
-            skills.powerspike,
+            skills.powerSpike,
             skills.oneVsNineCarry
         ],
     },
@@ -101,7 +101,18 @@ module.exports = {
             agility: 7
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.headbutt,
+            skills.hehEmoji,
+            skills.banter,
+            skills.decoy,
+            skills.bonk,
+            skills.kick,
+            skills.lockIn,
+            skills.partnerBoost,
+            skills.concentrate,
+            skills.warn
+        ],
     },
     animeGoon: {
         name: "Anime Goon",
@@ -118,7 +129,18 @@ module.exports = {
             agility: 10
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.blackFlash,
+            skills.exercise,
+            skills.hehEmoji,
+            skills.skullReact,
+            skills.threatening,
+            skills.bonk,
+            skills.squareUp,
+            skills.powerSpike,
+            skills.plotArmor,
+            skills.quickJab
+        ],
     },
     mudae: {
         name: "Mudae",
@@ -135,7 +157,18 @@ module.exports = {
             agility: 11
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.banter,
+            skills.prune,
+            skills.bonk,
+            skills.blackFlash,
+            skills.meme,
+            skills.clearingTwirl,
+            skills.blackteaSipper,
+            skills.slashTrap,
+            skills.ghost,
+            skills.hypeUp
+        ],
     },
     pnoBot: {
         name: "PNO Bot",
@@ -152,7 +185,18 @@ module.exports = {
             agility: 6
         },
         stances: [],
-        skills: [],
+        skills: [
+            skills.spamPing,
+            skills.messageDelay,
+            skills.punch,
+            skills.logOff,
+            skills.slashTrap,
+            skills.prune,
+            skills.banFrenzy,
+            skills.kick,
+            skills.warmWelcome,
+            skills.warn
+        ],
     },
     iceball: {
         name: "Iceball",
@@ -169,7 +213,18 @@ module.exports = {
             agility: 5
         },
         stances: [stances.artist],
-        skills: [],
+        skills: [
+            skills.ghost,
+            skills.meme,
+            skills.chivalry,
+            skills.spamPing,
+            skills.kick,
+            skills.sillyAssault,
+            skills.unpredictable,
+            skills.flame,
+            skills.hypeUp,
+            skills.slashTrap
+        ],
     },
     cat: {
         name: "Cat",
@@ -186,7 +241,18 @@ module.exports = {
             agility: 18
         },
         stances: [stances.kpop],
-        skills: [],
+        skills: [
+            skills.flame,
+            skills.banter,
+            skills.bonk,
+            skills.focused,
+            skills.ghost,
+            skills.logOff,
+            skills.hypeUp,
+            skills.clearingTwirl,
+            skills.warn,
+            skills.moralSupport
+        ],
     },
     gblaze: {
         name: "Gblaze",
@@ -203,7 +269,18 @@ module.exports = {
             agility: 11
         },
         stances: [stances.tornt],
-        skills: [],
+        skills: [
+            skills.ghost,
+            skills.headbutt,
+            skills.silentStrike,
+            skills.hehEmoji,
+            skills.focused,
+            skills.debate,
+            skills.lockIn,
+            skills.warn,
+            skills.inTheZone,
+            skills.squareUp
+        ],
     },
     breifmanny: {
         name: "Breifmanny",
@@ -220,7 +297,18 @@ module.exports = {
             agility: 15
         },
         stances: [stances.king],
-        skills: [],
+        skills: [
+            skills.flame,
+            skills.capsLock,
+            skills.squareUp,
+            skills.lockIn,
+            skills.banter,
+            skills.inTheZone,
+            skills.gank,
+            skills.ghost,
+            skills.powerSpike,
+            skills.hypeUp
+        ],
     },
     fincayran: {
         name: "Fincayran",
@@ -237,7 +325,18 @@ module.exports = {
             agility: 14
         },
         stances: [stances.bartender],
-        skills: [],
+        skills: [
+            skills.blackFlash,
+            skills.headbutt,
+            skills.bonk,
+            skills.silentStrike,
+            skills.logOff,
+            skills.decoy,
+            skills.clearingTwirl,
+            skills.debate,
+            skills.focused,
+            skills.concentrate
+        ],
     },
     leo: {
         name: "Leo",
@@ -254,7 +353,18 @@ module.exports = {
             agility: 16
         },
         stances: [stances.pengu],
-        skills: [],
+        skills: [
+            skills.squareUp,
+            skills.blackFlash,
+            skills.lockIn,
+            skills.gank,
+            skills.silentStrike,
+            skills.quickJab,
+            skills.irlPoster,
+            skills.powerSpike,
+            skills.oneVsNineCarry,
+            skills.headbutt
+        ],
     },
     james: {
         name: "James",
@@ -271,7 +381,18 @@ module.exports = {
             agility: 10
         },
         stances: [stances.queen],
-        skills: [],
+        skills: [
+            skills.banter,
+            skills.flame,
+            skills.capsLock,
+            skills.decoy,
+            skills.hypeUp,
+            skills.focused,
+            skills.roam,
+            skills.hehEmoji,
+            skills.bonk,
+            skills.clearingTwirl
+        ],
     },
     joy: {
         name: "Joy",
@@ -288,7 +409,18 @@ module.exports = {
             agility: 13
         },
         stances: [stances.secondDinner],
-        skills: [],
+        skills: [
+            skills.meme,
+            skills.banter,
+            skills.punch,
+            skills.hehEmoji,
+            skills.clearingTwirl,
+            skills.sillyAssault,
+            skills.capsLock,
+            skills.sarcastic,
+            skills.flame,
+            skills.quickJab
+        ],
     },
     pyro: {
         name: "Pyro",
@@ -298,13 +430,24 @@ module.exports = {
         img: "https://cdn.discordapp.com/attachments/1253541184463310848/1277530847037231165/nQXSAyfz_400x400.png?ex=66d6bb51&is=66d569d1&hm=2f05b9e14fa064258ce10a58218400ddcf3001c4f829604ec91c5524748d1739&",
         stats: {
             health: 16,
-            strength: 17,
+            strength: 14,
             fortitude: 12,
             passion: 6,
             logic: 8,
             agility: 4
         },
         stances: [stances.mordekaiser],
-        skills: [],
+        skills: [
+            skills.headbutt,
+            skills.squareUp,
+            skills.exercise,
+            skills.kick,
+            skills.plotArmor,
+            skills.banFrenzy,
+            skills.roam,
+            skills.logOff,
+            skills.bonk,
+            skills.lockIn
+        ],
     }
 }

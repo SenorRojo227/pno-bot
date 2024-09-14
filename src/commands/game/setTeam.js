@@ -10,13 +10,12 @@ const Inventory = require('../../models/inventory');
 const getUnits = require('../../utils/gacha/getUnits');
 
 module.exports = {
-    name: "teambuilder",
-    description: "Edit a team in the teambuilder menu.",
-    deleted: true,
+    name: "setteam",
+    description: "Assigns a team for you to battle with.",
     options: [
         {
             name: "team",
-            description: "Choose the team you wish to edit.",
+            description: "Choose the team you wish to set.",
             type: ApplicationCommandOptionType.Number,
             choices: [
                 {
@@ -33,17 +32,16 @@ module.exports = {
                 }
             ],
             required: true,
-        },
+        }
     ],
 
     callback: async (client, interaction) => {
         const query = {
             userId: interaction.user.id,
-            guildId: interaction.guild.id,
         };
         try {
-            const inv = await Inventory.findOne(query);
-            if (inv) {
+            const invs = await Inventory.find(query);
+            for (const inv of invs) {
                 let members = [];
                 const units = getUnits();
                 for (const i of inv.units) {
@@ -77,12 +75,13 @@ module.exports = {
                     .setTitle("Team " + interaction.options.get("team").value);
                 
                 interaction.reply({embeds: [embed], components: [actionRow], ephemeral: true})
-            } else {
-                interaction.reply("Your inventory is not set up yet! Use /daily to start gaining money!");
+            }
+            if (invs.length == 0) {
+                interaction.reply("You don't have an inventory set up yet! Use /daily in a server to start gaining money!");
             }
         } catch(error) {
-            console.log("Error opening the teambuilder: " + error);
-            interaction.reply("There was an error while trying to access the teambuilder. Please try again later.");
+            console.log("Error setting team: " + error);
+            interaction.reply("There was an error while trying to set your team. Please try again later.");
         }
     }
 }

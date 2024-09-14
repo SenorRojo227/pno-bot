@@ -67,7 +67,7 @@ module.exports = {
                     {
                         name: "\u200b",
                         value: "\u200b",
-                    }/*,
+                    },
                     {
                         name: "Skills",
                         value: unit.skills[0].name  + "\n" +
@@ -85,7 +85,7 @@ module.exports = {
                         unit.skills[7].name  + "\n" +
                         unit.skills[9].name,
                         inline: true
-                    }*/);
+                    });
                     break;
                 case "Item":
                     break;

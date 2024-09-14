@@ -2,9 +2,7 @@ module.exports = {
     oneVsNineCarry: {
         name: "1v9 Carry",
         description: "The user's Strength and Passion increase by 1 stage upon switch in if all allied units are defeated.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Red"
     },
     banFrenzy: {
@@ -39,6 +37,12 @@ module.exports = {
         priority: 0,
         color: "Black"
     },
+    blackteaSipper: {
+        name: "Blacktea Sipper",
+        description: "The user regenerates 1/3 of their maximum health upon switching out.",
+        category: "Passive",
+        color: "Black"
+    },
     bonk: {
         name: "Bonk",
         description: "Deals 1.5x damage if the opponent is holding an item. Removes items.",
@@ -50,31 +54,32 @@ module.exports = {
     botPerms: {
         name: "Bot Perms",
         description: "Changes the channel to #bots upon switchin.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Gray"
     },
     capsLock: {
         name: "Caps Lock",
         description: "Increases the user's Passion by 2 stages.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "White"
     },
+    chillOut: {
+        name: "Chill Out",
+        description: "The user has all of their status conditions removed.",
+        category: "Status",
+        priority: 0,
+        color: "Blue"
+    },
     chivalry: {
         name: "Chivalry",
         description: "Increases the user's Passion by 1 stage when swapping in from a Female member.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "White"
     },
     clearingTwirl: {
         name: "Clearing Twirl",
         description: "Removes all hazards from the field.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Pink"
@@ -82,7 +87,6 @@ module.exports = {
     concentrate: {
         name: "Concentrate",
         description: "Increases the user's Passion and Logic by 1 stage.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Blue"
@@ -98,7 +102,6 @@ module.exports = {
     decoy: {
         name: "Decoy",
         description: "The user sacrifices 1/4 of their HP to set up a decoy that takes damage in its place.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Green"
@@ -106,15 +109,12 @@ module.exports = {
     emojiConnoisseur: {
         name: "Emoji Connoisseur",
         description: "Increases the power of Emoji-based attacks by 1.3x.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "White"
     },
-    excercise: {
-        name: "Excercise",
+    exercise: {
+        name: "Exercise",
         description: "Increases the user's Strength and Fortitude by 1 stage.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Red"
@@ -126,6 +126,12 @@ module.exports = {
         category: "Passion",
         priority: 0,
         color: "Red"
+    },
+    focused: {
+        name: "Focused",
+        description: "The user can not be inflicted with Distracted.",
+        category: "Passive",
+        color: "Green"
     },
     gambit: {
         name: "Gambit",
@@ -170,17 +176,20 @@ module.exports = {
     hypeUp: {
         name: "Hype Up",
         description: "The opposing unit is forced to use the same move for 4 consecutive turns.",
-        power: 0,
         category: "Status",
         priority: 0,
+        color: "Red"
+    },
+    inTheZone: {
+        name: "In the Zone",
+        description: "The user deals 1.5x damage while Stressed.",
+        category: "Passive",
         color: "Red"
     },
     irlPoster: {
         name: "IRL Poster",
         description: "Doubles the Agility of the user in #irl.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Red"
     },
     kick: {
@@ -194,15 +203,12 @@ module.exports = {
     kingsAura: {
         name: "King's Aura",
         description: "Prevents damage from priority moves against the user.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Blue"
     },
     lockIn: {
         name: "Lock In",
         description: "Increases the user's Strength by 2 stages.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Black"
@@ -210,7 +216,6 @@ module.exports = {
     logOff: {
         name: "Log Off",
         description: "Heals the user for 50% of their maximum health.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "White"
@@ -226,23 +231,24 @@ module.exports = {
     messageDelay: {
         name: "Message Delay",
         description: "All targeted skills land 1 turn later with 50% increased Power and -3 Priority.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Gray"
+    },
+    moralSupport: {
+        name: "Moral Support",
+        description: "Changes the channel to #irl upon switchin.",
+        category: "Passive",
+        color: "White"
     },
     onTheHouse: {
         name: "On The House",
         description: "The opponent becomes Tipsy upon dealin direct damage to the user.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "White"
     },
     orderUp: {
         name: "Order Up",
         description: "Heal the frontline unit on the next turn for 50% of the user's maximum health.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "White"
@@ -250,23 +256,18 @@ module.exports = {
     plotArmor: {
         name: "Plot Armor",
         description: "If the user is hit with an attack that depletes their health from max HP, they survive with 1 HP.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Black"
     },
     partnerBoost: {
         name: "Partner Boost",
         description: "The user deals 1.3x damage while having a Decoy active.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Green"
     },
-    powerspike: {
-        name: "Powerspike",
+    powerSpike: {
+        name: "Power Spike",
         description: "Increases the user's Strength and Agility by 1 stage.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Black"
@@ -282,9 +283,7 @@ module.exports = {
     eventHoster: {
         name: "Event Hoster",
         description: "Changes the channel to #vc upon switchin.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Green"
     },
     punch: {
@@ -298,9 +297,7 @@ module.exports = {
     queensAura: {
         name: "Queen's Aura",
         description: "The user's Pink attacks have their priority increased by 1 while above 50% Health.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Pink"
     },
     quickJab: {
@@ -314,10 +311,15 @@ module.exports = {
     roam: {
         name: "Roam",
         description: "The user swaps with an allied unit. The opponent becomes Stressed.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Black"
+    },
+    sarcastic: {
+        name: "Sarcastic",
+        description: "Converts all White skills to Yellow skills. Gain 1.2x Power when converted.",
+        category: "Passive",
+        color: "Yellow"
     },
     seduction: {
         name: "Seduction",
@@ -375,34 +377,51 @@ module.exports = {
         priority: 0,
         color: "Red"
     },
+    stressFree: {
+        name: "Stress Free",
+        description: "The user can not be inflicted with Stressed.",
+        category: "Passive",
+        color: "Blue"
+    },
     traditionalFighter: {
         name: "Traditional Fighter",
         description: "The user's attacks ignore Decoys.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Green"
     },
     tFisher: {
         name: "T-Fisher",
         description: "Doubles the Agility of the user in #bots.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "Gray"
+    },
+    threatening: {
+        name: "Threatening",
+        description: "Decreases the opponent's Strength by 1 stage upon switchin.",
+        category: "Passive",
+        color: "Red"
+    },
+    unpredictable: {
+        name: "Unpredictable",
+        description: "The user changes color to match its last used skill.",
+        category: "Passive",
+        color: "Yellow"
+    },
+    performer: {
+        name: "Performer",
+        description: "The user inflicts Distracted on the opponent upon taking direct damage.",
+        category: "Passive",
+        color: "Yellow"
     },
     warmWelcome: {
         name: "Warm Welcome",
         description: "All White Atttacks used by the user gain 1.3x Power while at full health.",
-        power: 0,
         category: "Passive",
-        priority: 0,
         color: "White"
     },
     warn: {
         name: "Warn",
         description: "Prevents the opponent from using non-damaging moves for 4 consecutive turns.",
-        power: 0,
         category: "Status",
         priority: 0,
         color: "Gray"
