@@ -12,30 +12,9 @@ const getUnits = require('../../utils/gacha/getUnits');
 module.exports = {
     name: "setteam",
     description: "Assigns a team for you to battle with.",
-    options: [
-        {
-            name: "team",
-            description: "Choose the team you wish to set.",
-            type: ApplicationCommandOptionType.Number,
-            choices: [
-                {
-                    name: "Team 1",
-                    value: 1,
-                },
-                {
-                    name: "Team 2",
-                    value: 2,
-                },
-                {
-                    name: "Team 3",
-                    value: 3,
-                }
-            ],
-            required: true,
-        }
-    ],
 
     callback: async (client, interaction) => {
+        /*
         const query = {
             userId: interaction.user.id,
         };
@@ -83,5 +62,6 @@ module.exports = {
             console.log("Error setting team: " + error);
             interaction.reply("There was an error while trying to set your team. Please try again later.");
         }
+        */
     }
 }

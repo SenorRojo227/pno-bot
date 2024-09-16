@@ -203,7 +203,7 @@ module.exports = {
         colors: ["Blue"],
         rarity: 4,
         gender: "Male",
-        img: "",
+        img: "https://cdn.discordapp.com/avatars/215561367501930497/2c718b712eee692803cfcce63483b7e2.png?size=4096",
         stats: {
             health: 13,
             strength: 5,
@@ -315,7 +315,7 @@ module.exports = {
         colors: ["Green", "Black"],
         rarity: 4,
         gender: "Female",
-        img: "",
+        img: "https://cdn.discordapp.com/avatars/199406684186083330/bdedff03ac8f5f83b0c186caa4f0d4a7.png?size=4096",
         stats: {
             health: 10,
             strength: 11,
@@ -399,7 +399,7 @@ module.exports = {
         colors: ["Pink", "Yellow"],
         rarity: 4,
         gender: "Female",
-        img: "",
+        img: "https://cdn.discordapp.com/avatars/265621677021331456/71fa46ae53ce673c3bcdcf78bff48af0.png?size=4096",
         stats: {
             health: 11,
             strength: 9,

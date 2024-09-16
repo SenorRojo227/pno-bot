@@ -2,25 +2,29 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.2.4": [
+        "- Allowed /viewUnit to recognize lower case names",
+        "- Fixed a bug that prevented units from appearing with the /viewUnit command",
+    ],
     "2.2.3": [
-        "- Added skills to /viewUnit command",
+        "- Added skills to /viewUnit command"
     ],
     "2.2.2": [
-        "- Fixed a bug that prevented certain rolls from saving",
+        "- Fixed a bug that prevented certain rolls from saving"
     ],
     "2.2.1": [
         "- Reset Inventories",
         "- Added more information to the /viewUnit command",
         "- Changed Minecraft Goon to Anime Goon",
-        "- Fixed a bug that prevented /roll from working as intended",
+        "- Fixed a bug that prevented /roll from working as intended"
     ],
     "2.2.0": [
         "- Begun preparing bot for v3.0.0",
-        "- Added the /viewUnit command to see more information about a unit",
+        "- Added the /viewUnit command to see more information about a unit"
     ],
     "2.1.2": [
         "- Added a pity system for the gacha",
-        "- Automatically send birthday messages in #announcements",
+        "- Automatically send birthday messages in #announcements"
     ],
     "2.1.1": [
         "- Sorted member's inventories automatically",

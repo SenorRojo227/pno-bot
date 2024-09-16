@@ -13,7 +13,8 @@ module.exports = async (client, interaction) => {
 
         if (!commandObject) return;
 
-        if ( (process.env.IS_LOCAL == "TRUE" && interaction.guild.id != process.env.TEST_ID) || (process.env.IS_LOCAL == "FALSE" && interaction.guild.id == process.env.TEST_ID) ) return;
+        //If local code, then run in local server only. Otherwise run anywhere
+        if (interaction.guild != null && ((process.env.IS_LOCAL == "TRUE" && interaction.guild.id != process.env.TEST_ID) || (process.env.IS_LOCAL == "FALSE" && interaction.guild.id == process.env.TEST_ID)) ) return;
 
         if (commandObject.testOnly) {
             if(interaction.guild.id != process.env.TEST_ID) {

@@ -19,7 +19,7 @@ module.exports = {
             const units = getUnits();
             let unit;
             for (const u of units) {
-                if (u.name == interaction.options.get("unit").value) {
+                if (u.name.toLowerCase() == interaction.options.get("unit").value.toLowerCase()) {
                     unit = u;
                     break;
                 }
