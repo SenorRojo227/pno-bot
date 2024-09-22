@@ -5,10 +5,6 @@ const inventorySchema = new Schema({
         type: String,
         required: true,
     },
-    guildId: {
-        type: String,
-        required: true,
-    },
     units: {
         type: Array,
         default: [],

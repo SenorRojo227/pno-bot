@@ -8,7 +8,6 @@ module.exports = {
     callback: async (client, interaction) => {
         const query = {
             userId: interaction.user.id,
-            guildId: interaction.guild.id,
         };
 
         try {

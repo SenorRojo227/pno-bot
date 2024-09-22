@@ -200,7 +200,7 @@ module.exports = {
     },
     iceball: {
         name: "Iceball",
-        colors: ["Blue"],
+        colors: ["Blue", "Yellow"],
         rarity: 4,
         gender: "Male",
         img: "https://cdn.discordapp.com/avatars/215561367501930497/2c718b712eee692803cfcce63483b7e2.png?size=4096",
@@ -238,7 +238,7 @@ module.exports = {
             fortitude: 13,
             passion: 10,
             logic: 13,
-            agility: 18
+            agility: 8
         },
         stances: [stances.kpop],
         skills: [
@@ -278,7 +278,7 @@ module.exports = {
             skills.debate,
             skills.lockIn,
             skills.warn,
-            skills.inTheZone,
+            skills.capsLock,
             skills.squareUp
         ],
     },
@@ -306,7 +306,7 @@ module.exports = {
             skills.inTheZone,
             skills.gank,
             skills.ghost,
-            skills.powerSpike,
+            skills.decoy,
             skills.hypeUp
         ],
     },
@@ -387,7 +387,7 @@ module.exports = {
             skills.capsLock,
             skills.decoy,
             skills.hypeUp,
-            skills.focused,
+            skills.inTheZone,
             skills.roam,
             skills.hehEmoji,
             skills.bonk,

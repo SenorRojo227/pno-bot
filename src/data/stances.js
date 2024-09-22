@@ -6,11 +6,15 @@ module.exports = {
         member: "Iceball",
         colors: ["Blue"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.creative,
+            skills.paint,
+            skills.sentimentalStrike
+        ],
         statIncreases: [
-            {passion: 2},
-            {passion: 3},
-            {passion: 4}
+            {fortitude: 1, passion: 5},
+            {fortitude: 1, passion: 6, logic: 1},
+            {fortitude: 2, passion: 7, logic: 1}
         ]
     },
     kpop: {
@@ -18,11 +22,15 @@ module.exports = {
         member: "Cat",
         colors: ["Black","Pink"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.performer,
+            skills.killerVocals,
+            skills.antifragile
+        ],
         statIncreases: [
-            {passion: 1, agility: 1},
-            {passion: 2, agility: 1},
-            {passion: 2, agility: 2}
+            {fortitude: 3, passion: 2, agility: 1},
+            {fortitude: 4, passion: 2, agility: 2},
+            {fortitude: 5, passion: 3, agility: 2}
         ]
     },
     tornt: {
@@ -30,11 +38,15 @@ module.exports = {
         member: "Gblaze",
         colors: ["Green"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.regenerator,
+            skills.acrobatics,
+            skills.bleakwindStorm
+        ],
         statIncreases: [
-            {agility: 2},
-            {agility: 3},
-            {agility: 4}
+            {strength: 1, fortitude: 1, passion: 1, logic: 1, agility: 2},
+            {strength: 1, fortitude: 2, passion: 1, logic: 1, agility: 3},
+            {strength: 1, fortitude: 3, passion: 1, logic: 1, agility: 4}
         ]
     },
     king: {
@@ -42,11 +54,15 @@ module.exports = {
         member: "Breifmanny",
         colors: ["Red","Blue"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.kingsAura,
+            skills.ironFist,
+            skills.rallyingSpeech
+        ],
         statIncreases: [
-            {strength: 1, fortitude: 1},
-            {strength: 1, fortitude: 2},
-            {strength: 2, fortitude: 2}
+            {strength: 2, fortitude: 1, passion: 1, logic: 1, agility: 1},
+            {strength: 3, fortitude: 1, passion: 1, logic: 1, agility: 2},
+            {strength: 3, fortitude: 2, passion: 1, logic: 2, agility: 2}
         ]
     },
     bartender: {
@@ -54,11 +70,15 @@ module.exports = {
         member: "Fincayran",
         colors: ["Green","Black"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.onTheHouse,
+            skills.bloodyMary,
+            skills.specialtyCocktail
+        ],
         statIncreases: [
-            {logic: 2},
-            {logic: 3},
-            {logic: 4}
+            {strength: 1, fortitude: 1, logic: 3, agility: 1},
+            {strength: 1, fortitude: 1, logic: 4, agility: 2},
+            {strength: 2, fortitude: 2, logic: 4, agility: 2}
         ]
     },
     pengu: {
@@ -66,11 +86,15 @@ module.exports = {
         member: "Leo",
         colors: ["Black","Blue"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.tactician,
+            skills.reroll,
+            skills.synergize
+        ],
         statIncreases: [
-            {logic: 2},
-            {passion: -1, logic: 3, agility: 1},
-            {passion: -2, logic: 4, agility: 2}
+            {logic: 5, agility: 1},
+            {logic: 6, agility: 2},
+            {logic: 7, agility: 3}
         ]
     },
     queen: {
@@ -78,11 +102,15 @@ module.exports = {
         member: "James",
         colors: ["Red","Pink"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.queensAura,
+            skills.seduction,
+            skills.gambit
+        ],
         statIncreases: [
-            {passion: 1, logic: 1},
-            {passion: 2, logic: 1},
-            {passion: 3, logic: 1}
+            {strength: 1, fortitude: 1, passion: 2, logic: 1, agility: 1},
+            {strength: 1, fortitude: 1, passion: 3, logic: 1, agility: 2},
+            {strength: 1, fortitude: 2, passion: 3, logic: 2, agility: 2}
         ]
     },
     secondDinner: {
@@ -90,11 +118,15 @@ module.exports = {
         member: "Joy",
         colors: ["Pink","Yellow"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.hungry,
+            skills.orderUp,
+            skills.chomp
+        ],
         statIncreases: [
-            {fortitude: 1, passion: 1},
-            {fortitude: 1, passion: 2},
-            {fortitude: 2, passion: 2}
+            {strength: 2, fortitude: 3, passion: 1},
+            {strength: 2, fortitude: 5, passion: 1},
+            {strength: 2, fortitude: 7, passion: 1}
         ]
     },
     mordekaiser: {
@@ -102,11 +134,15 @@ module.exports = {
         member: "Pyro",
         colors: ["Red, Green"],
         rarity: 5,
-        skills: [],
+        skills: [
+            skills.indestructable,
+            skills.obliterate,
+            skills.realmOfDeath
+        ],
         statIncreases: [
-            {strength: 1, fortitude: 1},
-            {strength: 1, fortitude: 2},
-            {strength: 2, fortitude: 2}
+            {strength: 2, fortitude: 3, logic: 1},
+            {strength: 3, fortitude: 4, logic: 1},
+            {strength: 4, fortitude: 4, logic: 2}
         ]
     }
 }

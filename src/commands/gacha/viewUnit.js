@@ -46,7 +46,7 @@ module.exports = {
                     },
                     {
                         name: "Stats",
-                        value: "**Health:** " + unit.stats.health  + "\n" + 
+                        value: "**Health:** " + unit.stats.health + "\n" + 
                             "**Strength:** " + unit.stats.strength + "\n" + 
                             "**Fortitude:** " + unit.stats.fortitude + "\n" + 
                             "**Passion:** " + unit.stats.passion + "\n" + 
@@ -88,6 +88,10 @@ module.exports = {
                     });
                     break;
                 case "Item":
+                    embed.addFields({
+                        name: "Description",
+                        value: unit.description
+                    })
                     break;
                 case "Stance":
                     embed.addFields({
@@ -97,6 +101,42 @@ module.exports = {
                     {
                         name: "Colors",
                         value: unit.colors[0] + (unit.colors[1] ? " / " + unit.colors[1] : "")
+                    },
+                    {
+                        name: "Stat Boosts",
+                        value: (unit.statIncreases[0].health ? "**Health:** " + unit.statIncreases[0].health + "\n" : "") + 
+                            (unit.statIncreases[0].strength ? "**Strength:** " + unit.statIncreases[0].strength + "\n" : "") + 
+                            (unit.statIncreases[0].fortitude ? "**Fortitude:** " + unit.statIncreases[0].fortitude + "\n" : "") + 
+                            (unit.statIncreases[0].passion ? "**Passion:** " + unit.statIncreases[0].passion + "\n" : "") + 
+                            (unit.statIncreases[0].logic ? "**Logic:** " + unit.statIncreases[0].logic + "\n" : "") + 
+                            (unit.statIncreases[0].agility ? "**Agility:** " + unit.statIncreases[0].agility + "\n" : ""),
+                        inline: true
+                    },
+                    {
+                        name: "Level 2",
+                        value: (unit.statIncreases[1].health ? "**Health:** " + unit.statIncreases[1].health + "\n" : "") + 
+                            (unit.statIncreases[1].strength ? "**Strength:** " + unit.statIncreases[1].strength + "\n" : "") + 
+                            (unit.statIncreases[1].fortitude ? "**Fortitude:** " + unit.statIncreases[1].fortitude + "\n" : "") + 
+                            (unit.statIncreases[1].passion ? "**Passion:** " + unit.statIncreases[1].passion + "\n" : "") + 
+                            (unit.statIncreases[1].logic ? "**Logic:** " + unit.statIncreases[1].logic + "\n" : "") + 
+                            (unit.statIncreases[1].agility ? "**Agility:** " + unit.statIncreases[1].agility + "\n" : ""),
+                        inline: true
+                    },
+                    {
+                        name: "Level 3",
+                        value: (unit.statIncreases[2].health ? "**Health:** " + unit.statIncreases[2].health + "\n" : "") + 
+                            (unit.statIncreases[2].strength ? "**Strength:** " + unit.statIncreases[2].strength + "\n" : "") + 
+                            (unit.statIncreases[2].fortitude ? "**Fortitude:** " + unit.statIncreases[2].fortitude + "\n" : "") + 
+                            (unit.statIncreases[2].passion ? "**Passion:** " + unit.statIncreases[2].passion + "\n" : "") + 
+                            (unit.statIncreases[2].logic ? "**Logic:** " + unit.statIncreases[2].logic + "\n" : "") + 
+                            (unit.statIncreases[2].agility ? "**Agility:** " + unit.statIncreases[2].agility + "\n" : ""),
+                        inline: true
+                    },
+                    {
+                        name: "Skills",
+                        value: unit.skills[0].name  + "\n" +
+                        unit.skills[1].name  + "\n" +
+                        unit.skills[2].name  + "\n"
                     });
                     break;
             }

@@ -2,9 +2,19 @@ require('dotenv').config();
 const pjson = require('../../../package.json');
 
 const versions = {
+    "2.3.0": [
+        "- Added a command to paste and save team data"
+    ],
+    "2.2.5": [
+        "- Added more info to /viewUnit for stances and items",
+        "- Adjusted /viewSkill layout slightly",
+        "- Allowed /viewSkill to recognize lower case names",
+        "- Allowed data to transfer between servers",
+        "Known Issue: /setBday is disabled for now and will be reworked soon"
+    ],
     "2.2.4": [
         "- Allowed /viewUnit to recognize lower case names",
-        "- Fixed a bug that prevented units from appearing with the /viewUnit command",
+        "- Fixed a bug that prevented units from appearing with the /viewUnit command"
     ],
     "2.2.3": [
         "- Added skills to /viewUnit command"

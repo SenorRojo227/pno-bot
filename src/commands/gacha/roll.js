@@ -37,7 +37,6 @@ module.exports = {
     callback: async (client, interaction) => {
         const invQuery = {
             userId: interaction.user.id,
-            guildId: interaction.guild.id,
         };
 
         try {

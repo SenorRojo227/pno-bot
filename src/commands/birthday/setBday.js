@@ -5,6 +5,7 @@ const scheduleBday = require('../../utils/birthday/scheduleBday');
 module.exports = {
     name: "setbday",
     description: "Sets the users birthday.",
+    testOnly: true,
     options: [
         {
             name: "day",
@@ -82,13 +83,13 @@ module.exports = {
             guildId: interaction.guild.id,
         };
 
-        try {
+        //try {
             const user = await Birthday.findOne(query);
             if (user) {
                 user.day = interaction.options.get("day").value;
                 user.month = interaction.options.get("month").value;
                 user.year = interaction.options.get("year").value;
-                scheduleBday(client, interaction.user, user);
+                scheduleBday(client, interaction.user.toString(), user);
                 await user.save();
                 interaction.reply("Your birthday has been updated successfully!");
             } else {
@@ -99,13 +100,13 @@ module.exports = {
                     month: interaction.options.get("month").value,
                     year: interaction.options.get("year").value,
                 });
-                scheduleBday(client, interaction.user, newUser);
+                scheduleBday(client, interaction.user.toString(), newUser);
                 await newUser.save();
                 interaction.reply("Your birthday has been set successfully!");
             }
-        } catch (error) {
-            console.log("Error setting birthday: " + error);
-            interaction.reply("There was an error while trying to set your birthday. Please try again later.");
-        }
+        //} catch (error) {
+        //    console.log("Error setting birthday: " + error);
+        //    interaction.reply("There was an error while trying to set your birthday. Please try again later.");
+        //}
     }
 }

@@ -5,6 +5,20 @@ module.exports = {
         category: "Passive",
         color: "Red"
     },
+    acrobatics: {
+        name: "Acrobatics",
+        description: "Deals 2x damage if the user is not holding an item.",
+        power: 7,
+        category: "Strength",
+        priority: 0,
+        color: "Green"
+    },
+    antifragile: {
+        name: "Antifragile",
+        description: "The user becomes immune to hazards.",
+        category: "Passive",
+        color: "Red"
+    },
     banFrenzy: {
         name: "Ban Frenzy",
         description: "The user becomes locked into this move for 3 turns.",
@@ -31,7 +45,7 @@ module.exports = {
     },
     blackFlash: {
         name: "Black Flash",
-        description: "No additional effect.",
+        description: "Ignores Shields.",
         power: 9,
         category: "Strength",
         priority: 0,
@@ -42,6 +56,22 @@ module.exports = {
         description: "The user regenerates 1/3 of their maximum health upon switching out.",
         category: "Passive",
         color: "Black"
+    },
+    bleakwindStorm: {
+        name: "Bleakwind Storm",
+        description: "Lowers the opponent's Speed by 1 stage.",
+        power: 7,
+        category: "Passion",
+        priority: 0,
+        color: "Green"
+    },
+    bloodyMary: {
+        name: "Bloody Mary",
+        description: "Inflicts Drunk on the opponent.",
+        power: 8,
+        category: "Strength",
+        priority: 0,
+        color: "Red"
     },
     bonk: {
         name: "Bonk",
@@ -63,6 +93,14 @@ module.exports = {
         category: "Status",
         priority: 0,
         color: "White"
+    },
+    chomp: {
+        name: "Chomp",
+        description: "Steals 1/4 of the HP dealt to the opponent.",
+        power: 9,
+        category: "Strength",
+        priority: 0,
+        color: "Green"
     },
     chillOut: {
         name: "Chill Out",
@@ -91,6 +129,12 @@ module.exports = {
         priority: 0,
         color: "Blue"
     },
+    creative: {
+        name: "Creative",
+        description: "The user changes color to match its skills.",
+        category: "Passive",
+        color: "White"
+    },
     debate: {
         name: "Debate",
         description: "Uses the user's Logic rather than Passion in damage calculation.",
@@ -111,6 +155,12 @@ module.exports = {
         description: "Increases the power of Emoji-based attacks by 1.3x.",
         category: "Passive",
         color: "White"
+    },
+    eventHoster: {
+        name: "Event Hoster",
+        description: "Changes the channel to #vc upon switchin.",
+        category: "Passive",
+        color: "Green"
     },
     exercise: {
         name: "Exercise",
@@ -173,12 +223,24 @@ module.exports = {
         priority: 0,
         color: "Green"
     },
+    hungry: {
+        name: "Hungry",
+        description: "Increases the user's Strength by 1.1x for each active turn that they do not deal direct damage. Resets upon dealing direct damage or switching out.",
+        category: "Passive",
+        color: "Pink"
+    },
     hypeUp: {
         name: "Hype Up",
         description: "The opposing unit is forced to use the same move for 4 consecutive turns.",
         category: "Status",
         priority: 0,
         color: "Red"
+    },
+    indestructable: {
+        name: "Indestructable",
+        description: "Gain a 1/8 health shield for 2 turns upon dealing damage. Regain 1/2 of the remaining shield as health upon expiration. Does not stack.",
+        category: "Passive",
+        color: "Green"
     },
     inTheZone: {
         name: "In the Zone",
@@ -192,6 +254,14 @@ module.exports = {
         category: "Passive",
         color: "Red"
     },
+    ironFist: {
+        name: "Iron Fist",
+        description: "No additional effect.",
+        power: 10,
+        category: "Strength",
+        priority: 0,
+        color: "Green"
+    },
     kick: {
         name: "Kick",
         description: "Forces the opposing unit to swap places with a random opposing unit.",
@@ -199,6 +269,14 @@ module.exports = {
         category: "Strength",
         priority: -1,
         color: "Gray"
+    },
+    killerVocals: {
+        name: "Killer Vocals",
+        description: "Gains priority in #vc.",
+        power: 8,
+        category: "Passion",
+        priority: 0,
+        color: "Black"
     },
     kingsAura: {
         name: "King's Aura",
@@ -240,6 +318,14 @@ module.exports = {
         category: "Passive",
         color: "White"
     },
+    obliterate: {
+        name: "Obliterate",
+        description: "Hits Pink types for neutral damage.",
+        power: 7,
+        category: "Strength",
+        priority: 0,
+        color: "Black"
+    },
     onTheHouse: {
         name: "On The House",
         description: "The opponent becomes Tipsy upon dealin direct damage to the user.",
@@ -253,17 +339,24 @@ module.exports = {
         priority: 0,
         color: "White"
     },
-    plotArmor: {
-        name: "Plot Armor",
-        description: "If the user is hit with an attack that depletes their health from max HP, they survive with 1 HP.",
-        category: "Passive",
-        color: "Black"
+    paint: {
+        name: "Paint",
+        description: "Changes the opponent to match the user's color. Acts before Creative.",
+        category: "Status",
+        priority: 0,
+        color: "Blue"
     },
     partnerBoost: {
         name: "Partner Boost",
         description: "The user deals 1.3x damage while having a Decoy active.",
         category: "Passive",
         color: "Green"
+    },
+    plotArmor: {
+        name: "Plot Armor",
+        description: "If the user is hit with an attack that depletes their health from max HP, they survive with 1 HP.",
+        category: "Passive",
+        color: "Black"
     },
     powerSpike: {
         name: "Power Spike",
@@ -279,12 +372,6 @@ module.exports = {
         category: "Passion",
         priority: 0,
         color: "Gray"
-    },
-    eventHoster: {
-        name: "Event Hoster",
-        description: "Changes the channel to #vc upon switchin.",
-        category: "Passive",
-        color: "Green"
     },
     punch: {
         name: "Punch",
@@ -308,6 +395,32 @@ module.exports = {
         priority: 1,
         color: "White"
     },
+    rallyingSpeech: {
+        name: "Rallying Speech",
+        description: "Increases the user's Strength, Passion, and Agility by 1 stage.",
+        category: "Status",
+        priority: 0,
+        color: "Red"
+    },
+    realmOfDeath: {
+        name: "Realm of Death",
+        description: "Changes the opponent to match the user's color. Acts before Creative.",
+        category: "Status",
+        priority: 0,
+        color: "Black"
+    },
+    regenerator: {
+        name: "Regenerator",
+        description: "The user heals 1/3 of its max Health upon switching out.",
+        category: "Passive",
+        color: "Green"
+    },
+    reroll: {
+        name: "Reroll",
+        description: "Use a random skill from the user's skillset that is not currently learned.",
+        category: "Passive",
+        color: "White"
+    },
     roam: {
         name: "Roam",
         description: "The user swaps with an allied unit. The opponent becomes Stressed.",
@@ -329,10 +442,18 @@ module.exports = {
         priority: 0,
         color: "Pink"
     },
+    sentimentalStrike: {
+        name: "Sentimental Strike",
+        description: "Deals 2x damage if the user shares a color with the opponent. Acts before Creative.",
+        power: 8,
+        category: "Passion",
+        priority: 0,
+        color: "Pink"
+    },
     silentStrike: {
         name: "Silent Strike",
-        description: "No additional effect",
-        power: 9,
+        description: "Deals 1.5x Power against Distracted members.",
+        power: 8,
         category: "Strength",
         priority: 0,
         color: "Blue"
@@ -369,6 +490,14 @@ module.exports = {
         priority: 0,
         color: "White"
     },
+    specialtyCocktail: {
+        name: "Specialty Cocktail",
+        description: "If the opponent is Drunk, deals damage based on the opponent's Logic instead of Fortitude.",
+        power: 9,
+        category: "Strength",
+        priority: 0,
+        color: "White"
+    },
     squareUp: {
         name: "Square Up",
         description: "No additional effect.",
@@ -383,11 +512,17 @@ module.exports = {
         category: "Passive",
         color: "Blue"
     },
-    traditionalFighter: {
-        name: "Traditional Fighter",
-        description: "The user's attacks ignore Decoys.",
+    synergize: {
+        name: "Synergize",
+        description: "Increases the user's Agility by 1 stage and transforms all of your skills into random skills of the same type. Resets upon switching out.",
         category: "Passive",
-        color: "Green"
+        color: "White"
+    },
+    tactician: {
+        name: "Tactician",
+        description: "Increases the user's Strength by 1.2x for each unique skill used. Resets upon switching out.",
+        category: "Passive",
+        color: "Blue"
     },
     tFisher: {
         name: "T-Fisher",
@@ -400,6 +535,12 @@ module.exports = {
         description: "Decreases the opponent's Strength by 1 stage upon switchin.",
         category: "Passive",
         color: "Red"
+    },
+    traditionalFighter: {
+        name: "Traditional Fighter",
+        description: "The user's attacks ignore Decoys.",
+        category: "Passive",
+        color: "Green"
     },
     unpredictable: {
         name: "Unpredictable",

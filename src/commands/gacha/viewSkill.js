@@ -14,11 +14,11 @@ module.exports = {
     ],
 
     callback: (client, interaction) => {
-        //try {
+        try {
             const skills = Object.values(getSkills);
             let skill;
             for (const s of skills) {
-                if (s.name == interaction.options.get("skill").value) {
+                if (s.name.toLowerCase() == interaction.options.get("skill").value.toLowerCase()) {
                     skill = s;
                     break;
                 }
@@ -40,16 +40,18 @@ module.exports = {
                     name: "Category",
                     value: skill.category,
                     inline: true
-                },
-                {
+                });
+            if (skill.power) {
+                embed.addFields({
                     name: "Power",
                     value: "" + skill.power,
                     inline: true
                 });
+            }
             interaction.reply({embeds: [embed]});
-        /*} catch (error) {
+        } catch (error) {
             console.log("Error viewing skill: " + error);
             interaction.reply("There was an error while trying to view this skill. Please try again later.");
-        }*/
+        }
     }
 }

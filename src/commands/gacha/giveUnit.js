@@ -29,7 +29,6 @@ module.exports = {
     callback: async (client, interaction) => {
         const invQuery = {
             userId: interaction.options.getMember("user").id,
-            guildId: interaction.guild.id,
         };
 
         try {
