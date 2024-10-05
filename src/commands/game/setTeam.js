@@ -16,6 +16,12 @@ module.exports = {
     ],
 
     callback: async (client, interaction) => {
-        interaction.reply(interaction.options.get("team").value);
+        const elements = interaction.options.get("team").value.split(" ");
+
+        const section = "Team";
+        for (const element of elements) {
+            console.log(element);
+        }
+        interaction.reply("Test Complete.");
     }
 }

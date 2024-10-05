@@ -1,6 +1,6 @@
 {
   "name": "pno-bot",
-  "version": "2.2.5",
+  "version": "2.2.6",
   "description": "",
   "main": "src/index.js",
   "scripts": {

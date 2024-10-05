@@ -328,7 +328,7 @@ module.exports = {
     },
     onTheHouse: {
         name: "On The House",
-        description: "The opponent becomes Tipsy upon dealin direct damage to the user.",
+        description: "The opponent becomes Drunk upon dealing direct damage to the user.",
         category: "Passive",
         color: "White"
     },

@@ -5,6 +5,11 @@ const versions = {
     "2.3.0": [
         "- Added a command to paste and save team data"
     ],
+    "2.2.6": [
+        "- Added pages to /inventory",
+        "- Fixed a bug that prevented users from viewing their inventories",
+        "Known Issue: /setBday is disabled for now and will be reworked soon"
+    ],
     "2.2.5": [
         "- Added more info to /viewUnit for stances and items",
         "- Adjusted /viewSkill layout slightly",
